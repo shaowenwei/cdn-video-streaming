@@ -13,6 +13,35 @@
 
 using namespace std;
 
+class Repl{
+public:
+    string ip;
+    int portNumServer;
+    int listen_port;
+    Repl(char *ip, int portNumServer, int listen_port){
+        this->ip = ip;
+        this->portNumServer = portNumServer;
+        this->listen_port = listen_port;
+    }
+    
+    string replace(string s){
+        size_t found = s.find("Host: ");
+        size_t f = s.find("Connection");
+        s.erase(s.begin()+found+6, s.begin()+f);
+        s.insert(found+6, ip+":"+to_string(portNumServer)+"\r\n");
+        return s;
+    }
+    
+    string replaceBack(string s){
+        size_t found = s.find("Location: ");
+        size_t f = s.find("Content-Type: ");
+        s.erase(s.begin()+found+10, s.begin()+f);
+        s.insert(found+10, "http://localhost:"+to_string(listen_port)+"/index.html\r\n");
+        return s;
+    }
+    
+};
+
 int main(int argc, char* argv[])
 {
 	if(argc != 4)
@@ -61,7 +90,7 @@ int main(int argc, char* argv[])
 	int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
 	if(err1 == -1)
 	{
-		std::cout << "Error on connect to server\n";
+		std::cout << "Error on connect to web server\n";
 		exit(1);
 	}
 
@@ -105,7 +134,7 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
-
+		Repl repl(ipserver, portNumServer, portNum);
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
@@ -125,22 +154,40 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<< "Received from browser: "<<buf<<endl;
+						cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
-					// send to web server 
-					int bytesSent = send(serversd, &buf, 1000, 0);
+					string s = buf;
+					string buff = repl.replace(s);
+
+					//send to web server 
+					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
 					if(bytesSent <= 0){
 						cout << "Error sending to web server" << endl;
+					}
+					else{
+						cout<<"Send to web server:\n"<<buff<<endl;
 					}
 
 					// receive from web server
 					int bytesRecv = recv(serversd, &buf, 1000, 0);
 					if(bytesRecv > 0){
-						cout << "Received from web server: " << buf << endl;
+						cout << "Received from web server:\n" << buf << endl;
 					}
 					else{
 						exit(1);
+					}
+
+					string sb = buf;
+					buff = repl.replaceBack(sb);
+
+					//send to browser
+					int bytesSend = send(fds[i], buff.c_str(), buff.length(), 0);
+					if(bytesSend <= 0){
+						cout << "Error sending to browser" << endl;
+					}
+					else{
+						cout<<"Send back to browser:\n"<<buff<<endl;
 					}
 
 				} 
