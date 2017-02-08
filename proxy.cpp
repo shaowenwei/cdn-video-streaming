@@ -116,7 +116,6 @@ int main(int argc, char* argv[])
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving bytes" << endl;
-						cout << strerror(errno) << endl;
 						exit(1);
 					}
 					else if(bytesRecvd == 0)
