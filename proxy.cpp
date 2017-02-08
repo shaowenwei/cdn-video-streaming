@@ -39,6 +39,14 @@ public:
         s.insert(found+10, "http://localhost:"+to_string(listen_port)+"/index.html\r\n");
         return s;
     }
+
+    string modify(string s){
+	    size_t found = s.find("Referer: ");
+	    size_t f = s.find("Connection: ");
+	    s.erase(s.begin()+found+9, s.begin()+f);
+	    s.insert(found+9, "http://"+ip+":"+to_string(portNumServer)+"/\r\n");
+	    return s;
+    }
     
 };
 
@@ -158,16 +166,20 @@ int main(int argc, char* argv[])
 					}
 
 					string s = buf;
-					//string buff = repl.replace(s);
+					string bu = repl.replace(s);
+					string buff = bu;
+
+					if(bu.find("Referer: ") != string::npos)
+						buff = repl.modify(bu);
 
 					//send to web server 
-					int bytesSent = send(serversd, s.c_str(), s.length(), 0);
+					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
 					if(bytesSent <= 0){
 						cout << "Error sending to web server" << endl;
 						exit(1);
 					}
 					else{
-						cout<<"Send to web server:\n"<<s<<endl;
+						cout<<"Send to web server:\n"<<buff<<endl;
 					}
 
 					// receive from web server
@@ -182,6 +194,7 @@ int main(int argc, char* argv[])
 
 					string sb = buf;
 					// buff = repl.replaceBack(sb);
+					//buff = repl.modify(sb);
 
 					//send to browser
 					int bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
@@ -192,7 +205,6 @@ int main(int argc, char* argv[])
 					else{
 						cout<<"Send back to browser:\n"<<sb<<endl;
 					}
-
 				} 
 			}
 		}
