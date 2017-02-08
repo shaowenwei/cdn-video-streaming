@@ -135,7 +135,7 @@ int main(int argc, char* argv[])
 						cout << "Error sending to web server" << endl;
 					}
 
-					buf = "";
+					buf[1000] = "";
 					// receive from web server
 					int bytesRecv = recv(serversd, &buf, 1000, 0);
 					if(bytesRecv > 0){
