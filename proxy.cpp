@@ -183,7 +183,14 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					int bytesRecv = recv(serversd, &buf, 100000, 0);
+					int bytesRecv; 
+					while(1){
+						bytesRecv = recv(serversd, &buf, 1000, 0);
+						count +=bytesRecv;
+						if(bytesRecv == 0)break;
+					}
+					cout <<count<<endl;
+					count = 0;
 					if(bytesRecv < 0){
 						cout << "Error receiving from web server" << endl;
 						exit(1);
