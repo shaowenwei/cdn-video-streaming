@@ -183,7 +183,7 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					int bytesRecv; 
+					int bytesRecv,count; 
 					while(1){
 						bytesRecv = recv(serversd, &buf, 1000, 0);
 						count +=bytesRecv;
