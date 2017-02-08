@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netdb.h>
-#include <string.h>
+#include <string>
 #include <sys/select.h>
 #include <vector>
 #include <algorithm>
@@ -126,14 +126,25 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<<buf<<endl;
+						cout<< "Received from browser: "<<buf<<endl;
 					}
 
+					// send to web server 
 					int bytesSent = send(serversd, &buf, 1000, 0);
-					if(bytesSent <= 0)
-					{
-						std::cout << "Error sending stuff to server" << std::endl;
+					if(bytesSent <= 0){
+						cout << "Error sending to web server" << endl;
 					}
+
+					buf = "";
+					// receive from web server
+					int bytesRecv = recv(serversd, &buf, 1000, 0);
+					if(bytesRecv > 0){
+						cout << "Received from web server: " << buf << endl;
+					}
+					else{
+						exit(1);
+					}
+
 				} 
 			}
 		}
