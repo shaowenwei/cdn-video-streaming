@@ -26,7 +26,7 @@ public:
     
     string replace(string s){
         size_t found = s.find("Host: ");
-        size_t f = s.find("Connection");
+        size_t f = s.find("User-Agent: ");
         s.erase(s.begin()+found+6, s.begin()+f);
         s.insert(found+6, ip+":"+to_string(portNumServer)+"\r\n");
         return s;
@@ -170,7 +170,7 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					int bytesRecv = recv(serversd, &buf, 1000, 0);
+					int bytesRecv = recv(serversd, &buf, 3000, 0);
 					if(bytesRecv > 0){
 						cout << "Received from web server:\n" << buf << endl;
 					}
@@ -179,15 +179,15 @@ int main(int argc, char* argv[])
 					}
 
 					string sb = buf;
-					buff = repl.replaceBack(sb);
+					// buff = repl.replaceBack(sb);
 
 					//send to browser
-					int bytesSend = send(fds[i], buff.c_str(), buff.length(), 0);
+					int bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 					}
 					else{
-						cout<<"Send back to browser:\n"<<buff<<endl;
+						cout<<"Send back to browser:\n"<<sb<<endl;
 					}
 
 				} 
