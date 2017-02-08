@@ -158,19 +158,19 @@ int main(int argc, char* argv[])
 					}
 
 					string s = buf;
-					string buff = repl.replace(s);
+					//string buff = repl.replace(s);
 
 					//send to web server 
-					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
+					int bytesSent = send(serversd, s.c_str(), s.length(), 0);
 					if(bytesSent <= 0){
 						cout << "Error sending to web server" << endl;
 					}
 					else{
-						cout<<"Send to web server:\n"<<buff<<endl;
+						cout<<"Send to web server:\n"<<s<<endl;
 					}
 
 					// receive from web server
-					int bytesRecv = recv(serversd, &buf, 3000, 0);
+					int bytesRecv = recv(serversd, &buf, 100000, 0);
 					if(bytesRecv > 0){
 						cout << "Received from web server:\n" << buf << endl;
 					}
