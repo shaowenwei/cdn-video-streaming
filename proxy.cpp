@@ -28,7 +28,7 @@ public:
         size_t found = s.find("Host: ");
         size_t f = s.find("User-Agent: ");
         s.erase(s.begin()+found+6, s.begin()+f);
-        s.insert(found+6, ip+":"+to_string(portNumServer)+"\r\n");
+        s.insert(found+6, ip+"\r\n");
         return s;
     }
     
@@ -44,7 +44,7 @@ public:
 	    size_t found = s.find("Referer: ");
 	    size_t f = s.find("Connection: ");
 	    s.erase(s.begin()+found+9, s.begin()+f);
-	    s.insert(found+9, "http://"+ip+":"+to_string(portNumServer)+"/\r\n");
+	    s.insert(found+9, "http://"+ip+"/\r\n");
 	    return s;
     }
     
