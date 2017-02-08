@@ -101,7 +101,7 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<<buf<<endl;
+						std::cout<<buf<<std::endl;
 					}
 				}
 			}
