@@ -183,27 +183,22 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					int bytesRecv,bytesSend,count = 0; 
-					string sb;
-					while(1){
-						bytesRecv = recv(serversd, &buf, 1000, 0);
-						sb = buf;
-						cout<<sb<<endl;
-						bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
-						count += bytesRecv;
-						if(bytesRecv == 0)break;
-					}
-					//cout <<count<<endl;
-					count = 0;
+					int bytesRecv = recv(serversd, &buf, 100000, 0);
 					if(bytesRecv < 0){
 						cout << "Error receiving from web server" << endl;
-						exit(1);
+						bytesRecv = recv(serversd, &buf, 100000, 0);
+						//exit(1);
 					}
 					else{
 						cout << "Received from web server:\n" << buf << endl;
 					}
+
+					string sb = buf;
 					// buff = repl.replaceBack(sb);
 					//buff = repl.modify(sb);
+
+					//send to browser
+					int bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 						exit(1);
@@ -211,7 +206,6 @@ int main(int argc, char* argv[])
 					else{
 						cout<<"Send back to browser:\n"<<sb<<endl;
 					}
-
 				} 
 			}
 		}
