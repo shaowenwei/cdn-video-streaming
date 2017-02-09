@@ -53,9 +53,10 @@ public:
 
 class Len{
 public:
-    int body_length(string s){
+    int header_length(string s){
         size_t found = s.find("\r\n\r\n");
-        string sub = s.substr(found+4);
+        string sub = s.substr(0, found+4);
+        cout<<sub<<endl;
         return (int) sub.length();
     }
     
@@ -168,8 +169,8 @@ int main(int argc, char* argv[])
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
-					char buf[65535] = "";
-					int bytesRecvd = recv(fds[i], &buf, 65535, 0);
+					char buf[1000] = "";
+					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving bytes" << endl;
@@ -203,10 +204,10 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[65535];
+					char buf_r[1000];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 65535, 0);
+					int bytesRecv = recv(serversd, &buf_r, 1000, 0);
 					string total = "";
 					string s = "";
 
@@ -220,16 +221,16 @@ int main(int argc, char* argv[])
 						cout << "Received from web server:\n" << buf_r << endl;
 						s = buf_r;
 						total = total + s;
-						int body = len.body_length(s);
+						int header = len.header_length(s);
 						int content = len.content(s);
-						remain = content - body;
-						cout<<"body length: "<<body<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
+						remain = content - (bytesRecv - header);
+						cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
 					while(remain > 0){
 						//if(remain > 500)
-							bytesRecv = recv(serversd, &buf_r, 65535, 0);
+							bytesRecv = recv(serversd, &buf_r, 1000, 0);
 						//else 
 						//	bytesRecv = recv(serversd, &buf_r, remain, 0);
 						s = buf_r;
