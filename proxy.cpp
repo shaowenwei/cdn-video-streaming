@@ -203,12 +203,14 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[20000];
+					char buf_r[2000];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 20000, 0);
+					int bytesRecv = recv(serversd, &buf_r, 2000, 0);
 					string total = "";
 					string s = "";
+					int total_body = 0;
+					int body = 0;
 
 					if(bytesRecv < 0){
 						cout<< "Error receiving from web server:\n" << endl;
@@ -220,7 +222,8 @@ int main(int argc, char* argv[])
 						cout << "Received from web server:\n" << buf_r << endl;
 						s = buf_r;
 						total = total + s;
-						int body = len.body_length(s);
+						body = len.body_length(s);
+						total_body = total_body + body;
 						int content = len.content(s);
 						remain = content - body;
 						cout<<"body length: "<<body<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
@@ -228,12 +231,15 @@ int main(int argc, char* argv[])
 					}
 
 					while(remain > 0){
-						bytesRecv = recv(serversd, &buf_r, 20000, 0);
+						bytesRecv = recv(serversd, &buf_r, 2000, 0);
 						s = buf_r;
+						body = len.body_length(s);
+						total_body = total_body + body;
 						total = total + s;
 						remain = remain - bytesRecv;
 						cout<<"byte receive: "<<bytesRecv<<endl;
 						cout<<"remain: "<<remain<<endl;
+						cout<<"total_body: "<<total_body<<endl;
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
