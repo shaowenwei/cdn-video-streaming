@@ -51,6 +51,25 @@ public:
     
 };
 
+class Len{
+public:
+    int header_length(string s){
+        size_t found = s.find("\r\n\r\n");
+        string sub = s.substr(found+4);
+        return (int) sub.length();
+    }
+    
+    int content(string s){
+        size_t found = s.find("Content-Length: ");
+        string sub = s.substr(found+16);
+        size_t f = sub.find("\r\n");
+        sub = sub.substr(0,f);
+        int res = atoi(sub.c_str());
+        return res;
+
+    }
+};
+
 int main(int argc, char* argv[])
 {
 	if(argc != 4)
@@ -185,6 +204,8 @@ int main(int argc, char* argv[])
 
 					// receive from web server
 					char buf_r[50000];
+					Len len;
+					int remain = 0;
 					int bytesRecv = recv(serversd, &buf_r, 50000, 0);
 					if(bytesRecv < 0){
 						cout<< "Error receiving from web server:\n" << endl;
@@ -194,13 +215,19 @@ int main(int argc, char* argv[])
 					}
 					else{
 						cout << "Received from web server:\n" << buf_r << endl;
+						string s = buf_r;
+						int header = len.header_length(s);
+						int content = len.content(s);
+						int body = bytesRecv - header;
+						remain = content - body;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
-					int count = bytesRecv; 
-					while(bytesRecv >= 3000 && bytesRecv != 10532){
+					while(remain > 0){
 						bytesRecv = recv(serversd, &buf_r, 50000, 0);
-						count += bytesRecv;
+						remain = remain - bytesRecv;
+						cout<<"byte receive: "<<endl;
+						cout<<"remain: "<<remain<<endl;
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -211,7 +238,6 @@ int main(int argc, char* argv[])
 							cout << "Received from web server:\n" << buf_r << endl;
 						}
 					}
-					cout<<"total count is: "<<count<<endl;
 
 
 
