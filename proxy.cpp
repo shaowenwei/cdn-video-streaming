@@ -233,11 +233,7 @@ int main(int argc, char* argv[])
 							bytesRecv = recv(serversd, &buf_r, 1000, 0);
 						//else 
 						//	bytesRecv = recv(serversd, &buf_r, remain, 0);
-						s = buf_r;
-						total = total + s;
-						remain = remain - bytesRecv;
-						cout<<"byte receive: "<<bytesRecv<<endl;
-						cout<<"remain: "<<remain<<endl;
+
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -245,7 +241,12 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
-							cout << "Received from web server:\n" << buf_r << endl;
+							s = buf_r;
+							total = total + s;
+							remain = remain - bytesRecv;
+							cout<<"byte receive: "<<bytesRecv<<endl;
+							cout<<"remain: "<<remain<<endl;
+							//cout << "Received from web server:\n" << buf_r << endl;
 						}
 					}
 
