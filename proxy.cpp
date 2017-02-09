@@ -225,7 +225,7 @@ int main(int argc, char* argv[])
 						body = len.body_length(s);
 						total_body = total_body + body;
 						int content = len.content(s);
-						remain = content - body + 3;
+						remain = content - body;
 						cout<<"body length: "<<body<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
