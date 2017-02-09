@@ -203,10 +203,10 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[2000];
+					char buf_r[20000];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 2000, 0);
+					int bytesRecv = recv(serversd, &buf_r, 20000, 0);
 					string total = "";
 					string s = "";
 
