@@ -195,7 +195,7 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<< "Received from browser:\n"<<buf<<endl;
+						//cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
 					string buff = buf;
@@ -230,7 +230,7 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						cout << "Send to web server:\n" << buff << endl;
+						//cout << "Send to web server:\n" << buff << endl;
 					}
 
 					// receive from web server
@@ -250,7 +250,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						chunk += bytesRecv;
-						cout << "Received from web server:\n" << buf_r << endl;
+						//cout << "Received from web server:\n" << buf_r << endl;
 
 						//compute length
 						s = buf_r;
