@@ -255,7 +255,7 @@ int main(int argc, char* argv[])
 								exit(1);
 							}
 							else{
-								cout<<"Send back to browser:\n"<<endl;
+								cout<<"Send back to browser:\n"<<buf_r<<endl;
 							}
 						}
 					}
