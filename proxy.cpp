@@ -209,10 +209,10 @@ int main(int argc, char* argv[])
 							end = chrono::system_clock::now();
 							elapsed_seconds = end-start;
                 			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
-                			cout << "T_cur: " << T_cur << endl;
+                			cout << "T_cur: " << T_cur <<"s"<< endl;
                 			cout << "Chunk: " << chunk << endl;
-                			throughput = chunk/T_cur;
-                			cout << "throughput: " << throughput << endl;
+                			throughput = chunk * 8/(T_cur * 1000000);
+                			cout << "throughput: " << throughput << "Mbps" << endl;
 
 						}
 						if(frag == 1){
