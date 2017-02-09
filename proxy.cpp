@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int packet_len = 1000;
+#define packet_len 1000
 
 class Len{
 public:
@@ -144,7 +144,7 @@ int main(int argc, char* argv[])
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
-					char buf[packet_len];
+					char buf[packet_len] = "";
 
 
 
@@ -169,7 +169,9 @@ int main(int argc, char* argv[])
 					// check if request .f4m file change to _nolist.f4m
 					bool no_list = false;
 					string s_old = "";
+
 					if(buff.find(".f4m") != string::npos){
+						cout<<"detect .f4m file"<<endl;
 						Modify modify;
 						s_old = buff;
 						buff = modify.findf4m(buff);
