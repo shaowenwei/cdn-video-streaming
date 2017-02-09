@@ -284,7 +284,7 @@ int main(int argc, char* argv[])
 					//send to browser
 
 					cout<<sb.length()<<endl;
-					int bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
+					int bytesSend = send(fds[i], sb.c_str(), 500000, 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 						exit(1);
