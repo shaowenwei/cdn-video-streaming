@@ -49,6 +49,7 @@ class Chunk{
 				size_t f = sub.find("-");
 				sub = sub.substr(0,f);
 				int seg = atoi(sub.c_str());
+				cout << "Seg:" << seg <<endl;
 				return seg;
 			}
 			else return 0;
@@ -62,9 +63,10 @@ class Chunk{
 			if(found != string::npos)
 			{
 				string sub = s.substr(found + 4);
-				size_t f = sub.find("\n");
+				size_t f = sub.find(" ");
 				sub = sub.substr(0,f);
 				int frag = atoi(sub.c_str());
+				cout << "frag:" << frag <<endl;
 				return frag;
 			}
 			else return 0;
@@ -268,7 +270,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						total_bytes = total_bytes + bytesSend;
-						cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+						//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 					}
 
 
