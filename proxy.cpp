@@ -11,25 +11,24 @@
 #include <algorithm>
 #include <cassert>
 #include <cerrno>
-#include <time.h>
-#include <chrono>
-#include <sys/wait.h>
-#include <signal.h>
+#include <fstream>
 
 using namespace std;
+
+int packet_len = 1000;
 
 class Len{
 public:
     int header_length(string s){
         size_t found = s.find("\r\n\r\n");
         string sub = s.substr(0, found+4);
-        cout << sub << endl;
+        cout<<sub<<endl;
         return (int) sub.length();
     }
     
     int content(string s){
         size_t found = s.find("Content-Length: ");
-        string sub = s.substr(found + 16);
+        string sub = s.substr(found+16);
         size_t f = sub.find("\r\n");
         sub = sub.substr(0,f);
         int res = atoi(sub.c_str());
@@ -38,40 +37,14 @@ public:
     }
 };
 
-class Chunk{
-	public:
-		int seg_num(string s)
-		{
-			size_t found = s.find("Seg");
-			if(found != string::npos) 
-			{
-				string sub = s.substr(found + 3);
-				size_t f = sub.find("-");
-				sub = sub.substr(0,f);
-				int seg = atoi(sub.c_str());
-				cout << "Seg:" << seg <<endl;
-				return seg;
-			}
-			else return 0;
-
-			
-		}
-
-		int frag_num(string s)
-		{
-			size_t found = s.find("Frag");
-			if(found != string::npos)
-			{
-				string sub = s.substr(found + 4);
-				size_t f = sub.find(" ");
-				sub = sub.substr(0,f);
-				int frag = atoi(sub.c_str());
-				cout << "frag:" << frag <<endl;
-				return frag;
-			}
-			else return 0;
-		}
-
+class Modify{
+public:
+    string findf4m(string s){
+        size_t start = s.find(".f4m");
+        string in = "_nolist";
+        s.insert(start, in);
+        return s;
+    }
 };
 
 int main(int argc, char* argv[])
@@ -84,7 +57,7 @@ int main(int argc, char* argv[])
 	int portNum = atoi(argv[1]);
 	char *ipserver = argv[2];
 	int portNumServer = atoi(argv[3]);
-    int alpha = 1;
+
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	struct sockaddr_in self;
@@ -166,23 +139,17 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
-		chrono::time_point<chrono::system_clock> start, end; 
-        chrono::duration<double> elapsed_seconds;
-        int seg =  9999;
-        int frag = 9999;
-        int pre_seg = 9999;
-        int chunk = 0;
-        double T_cur = 0;
-        double throughput = 0;
-        Chunk find_num;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
-					//receive from browser
-					char buf[1000] = "";
-					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
+					char buf[packet_len];
+
+
+
+					//recv request from browser
+					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving bytes" << endl;
@@ -195,47 +162,43 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						//cout<< "Received from browser:\n"<<buf<<endl;
+						cout<< "Received from browser:\n"<<buf<<endl;
 					}
-
 					string buff = buf;
-					pre_seg = seg;
-					seg = find_num.seg_num(buff);
-					cout << "Seg:" << seg <<endl;
-					frag = find_num.frag_num(buff);
-					cout << "frag: " << frag << endl;
-					if(seg != 0 && frag != 0){
-						if(seg == (pre_seg + 1)) {
-							end = chrono::system_clock::now();
-							elapsed_seconds = end-start;
-                			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
-                			cout << "T_cur: " << T_cur <<"s"<< endl;
-                			cout << "Chunk: " << chunk << endl;
-                			throughput = chunk * 8/(T_cur * 1000000);
-                			cout << "throughput: " << throughput << "Mbps" << endl;
-                			start = chrono::system_clock::now();
 
-						}
+					// check if request .f4m file change to _nolist.f4m
+					bool no_list = false;
+					string s_old = "";
+					if(buff.find(".f4m") != string::npos){
+						Modify modify;
+						s_old = buff;
+						buff = modify.findf4m(buff);
+					    no_list = true;
 					}
 
 
 
-					//send to web server 
+
+
+
+					//forward request to web server
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
 					if(bytesSent <= 0){
 						cout << "Error sending to web server" << endl;
 						exit(1);
 					}
 					else{
-						//cout << "Send to web server:\n" << buff << endl;
+						cout << "Send to web server:\n" << buff << endl;
 					}
 
-					// receive from web server
-					char buf_r[1000];
+
+
+
+					// receive response from web server(header part)
+					char buf_r[packet_len];
 					Len len;
 					int remain = 0;
-					start = chrono::system_clock::now();
-					int bytesRecv = recv(serversd, &buf_r, 1000, 0);
+					int bytesRecv = recv(serversd, &buf_r, packet_len, 0);
 					string s = "";
 					int total_bytes = 0;
 
@@ -246,35 +209,41 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						chunk += bytesRecv;
-						//cout << "Received from web server:\n" << buf_r << endl;
+						cout << "Received from web server:\n" << buf_r << endl;
 
 						//compute length
 						s = buf_r;
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
-						//cout << "header length: " << header << "\nbody length: " << (bytesRecv - header) << "\ncontent length: " << content << "\nremain: " << remain << endl;
-						//cout << "bytesRecv: " << bytesRecv << endl;
+						cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
+						cout <<"bytesRecv: "<<bytesRecv<<endl;
 						total_bytes = total_bytes+bytesRecv;
 					}
 
-					//send to browser
-					int bytesSend = send(fds[i], buf_r, 1000, 0);
+
+
+
+
+					//send response to browser
+					int bytesSend = send(fds[i], buf_r, packet_len, 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 						exit(1);
 					}
 					else{
 						total_bytes = total_bytes + bytesSend;
-						//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+						cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 					}
+
+
+
 
 
 					while(remain > 0){
 
-						//recv from webserver
-						bytesRecv = recv(serversd, &buf_r, 1000, 0);
+						//recv response from webserver(body part)
+						bytesRecv = recv(serversd, &buf_r, packet_len, 0);
 						if(bytesRecv < 0){
 							cout << "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -282,25 +251,85 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
-							chunk += bytesRecv;
 							s = buf_r;
 							remain = remain - bytesRecv;
-							//cout << "byte receive: " << bytesRecv << endl;
-							//cout << "remain: " << remain << endl;
+							cout << "byte receive: " << bytesRecv << endl;
+							cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
-							//send to browser
-							bytesSend = send(fds[i], buf_r, 1000, 0);
+
+
+
+							//send response to browser
+							bytesSend = send(fds[i], buf_r, packet_len, 0);
 							if(bytesSend <= 0){
 								cout << "Error sending to browser" << endl;
 								exit(1);
 							}
 							else{
 								total_bytes = total_bytes + bytesSend;
-								//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+								cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 							}
 						}
 					}
+
+
+					//if request .f4m, proxy request .f4m and store it locally
+					if(no_list == true){
+
+						//send
+						int bytesS = send(serversd, s_old.c_str(), s_old.length(), 0);
+						if(bytesS <= 0){
+							cout << "Error sending .f4m request to web server" << endl;
+							exit(1);
+						}
+						else{
+							cout << "Send .f4m request to web server:\n" << buff << endl;
+						}
+
+						ofstream myfile;
+						myfile.open ("f4m.txt");
+
+
+						//revc header
+						char buf_h[packet_len];
+						int rem = 0;
+						string s1 = "";
+						int bytesR = recv(serversd, &buf_h, packet_len, 0);
+						if(bytesR < 0){
+							cout << "Error receiving .f4m from web server:\n" << endl;
+							exit(1);
+						}
+						else{
+							myfile << buf_h;
+							cout << "byte receive: " << bytesR << endl;
+							s1 = buf_h;
+							int header = len.header_length(s1);
+							int content = len.content(s1);
+							rem = content - (bytesR - header);
+							cout << "remain: " << rem << endl;
+						}
+
+						//recv whole response
+						while(rem > 0){
+							bytesR = recv(serversd, &buf_h, packet_len, 0);
+							if(bytesR < 0){
+								cout << "Error receiving from web server:\n" << endl;
+								exit(1);
+							}
+							else{
+								rem = rem - bytesR;
+								cout << "byte receive: " << bytesR << endl;
+								cout << "remain: " << rem << endl;
+								myfile << buf_h;
+							}
+						}
+						myfile.close();
+					}
+
+
+
+
 
 				} 
 			
