@@ -197,6 +197,19 @@ int main(int argc, char* argv[])
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
+					while(bytesRecv == 50000){
+						bytesRecv = recv(serversd, &buf_r, 50000, 0);
+						if(bytesRecv < 0){
+							cout<< "Error receiving from web server:\n" << endl;
+							cout << "Something went wrong! errno " << errno << ": ";
+	    				 	cout << strerror(errno) << endl;
+							exit(1);
+						}
+						else{
+							cout << "Received from web server:\n" << buf_r << endl;
+						}
+					}
+
 
 
 
