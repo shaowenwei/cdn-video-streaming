@@ -203,10 +203,10 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[2000];
+					char buf_r[1000];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 2000, 0);
+					int bytesRecv = recv(serversd, &buf_r, 1000, 0);
 					string total = "";
 					string s = "";
 					int total_body = 0;
@@ -231,7 +231,7 @@ int main(int argc, char* argv[])
 					}
 
 					while(remain > 0){
-						bytesRecv = recv(serversd, &buf_r, 2000, 0);
+						bytesRecv = recv(serversd, &buf_r, 1000, 0);
 						s = buf_r;
 						body = len.body_length(s);
 						total_body = total_body + body;
