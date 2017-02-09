@@ -168,8 +168,8 @@ int main(int argc, char* argv[])
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
-					char buf[500] = "";
-					int bytesRecvd = recv(fds[i], &buf, 500, 0);
+					char buf[65535] = "";
+					int bytesRecvd = recv(fds[i], &buf, 65535, 0);
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving bytes" << endl;
@@ -203,10 +203,10 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[500];
+					char buf_r[65535];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 500, 0);
+					int bytesRecv = recv(serversd, &buf_r, 65535, 0);
 					string total = "";
 					string s = "";
 
@@ -229,7 +229,7 @@ int main(int argc, char* argv[])
 
 					while(remain > 0){
 						//if(remain > 500)
-							bytesRecv = recv(serversd, &buf_r, 500, 0);
+							bytesRecv = recv(serversd, &buf_r, 65535, 0);
 						//else 
 						//	bytesRecv = recv(serversd, &buf_r, remain, 0);
 						s = buf_r;
