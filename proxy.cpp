@@ -11,6 +11,10 @@
 #include <algorithm>
 #include <cassert>
 #include <cerrno>
+#include <time.h>
+#include <chrono>
+#include <sys/wait.h>
+#include <signal.h>
 
 using namespace std;
 
@@ -166,8 +170,8 @@ int main(int argc, char* argv[])
         int frag = 9999;
         int pre_seg = 9999;
         int chunk = 0;
-        float T_cur = 0;
-        float throughput = 0;
+        double T_cur = 0;
+        double throughput = 0;
         Chunk find_num;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
