@@ -229,7 +229,7 @@ int main(int argc, char* argv[])
 
 					while(remain > 0){
 						//if(remain > 500)
-							bytesRecv = recv(serversd, &buf_r, remain, 0);
+							bytesRecv = recv(serversd, &buf_r, 500, 0);
 						//else 
 						//	bytesRecv = recv(serversd, &buf_r, remain, 0);
 						s = buf_r;
