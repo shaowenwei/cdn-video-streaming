@@ -208,8 +208,8 @@ int main(int argc, char* argv[])
 					Len len;
 					int remain = 0;
 					int bytesRecv = recv(serversd, &buf_r, 1000, 0);
-					string total = "";
 					string s = "";
+					int total_bytes = 0;
 
 					if(bytesRecv < 0){
 						cout<< "Error receiving from web server:\n" << endl;
@@ -219,21 +219,33 @@ int main(int argc, char* argv[])
 					}
 					else{
 						cout << "Received from web server:\n" << buf_r << endl;
+
+						//compute length
 						s = buf_r;
-						total = total + s;
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
 						cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
+						total_bytes = total_bytes+bytesRecv;
 					}
 
-					while(remain > 0){
-						//if(remain > 500)
-							bytesRecv = recv(serversd, &buf_r, 1000, 0);
-						//else 
-						//	bytesRecv = recv(serversd, &buf_r, remain, 0);
+					//send to browser
+					int bytesSend = send(fds[i], buf_r, 1000, 0);
+					if(bytesSend <= 0){
+						cout << "Error sending to browser" << endl;
+						exit(1);
+					}
+					else{
+						total_bytes = total_bytes+bytesSend;
+						cout<<"Send back to browser:\n"<<total_bytes<<endl;
+					}
 
+
+					while(remain > 0){
+
+						//recv from webserver
+						bytesRecv = recv(serversd, &buf_r, 1000, 0);
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -242,21 +254,21 @@ int main(int argc, char* argv[])
 						}
 						else{
 							s = buf_r;
-							total = total + s;
 							remain = remain - bytesRecv;
 							cout<<"byte receive: "<<bytesRecv<<endl;
 							cout<<"remain: "<<remain<<endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
 							//send to browser
-							// int bytesSend = send(fds[i], buf_r, 1000, 0);
-							// if(bytesSend <= 0){
-							// 	cout << "Error sending to browser" << endl;
-							// 	exit(1);
-							// }
-							// else{
-							// 	cout<<"Send back to browser:\n"<<buf_r<<endl;
-							// }
+							bytesSend = send(fds[i], buf_r, 1000, 0);
+							if(bytesSend <= 0){
+								cout << "Error sending to browser" << endl;
+								exit(1);
+							}
+							else{
+								total_bytes = total_bytes+bytesSend;
+								cout<<"Send back to browser:\n"<<total_bytes<<endl;
+							}
 						}
 					}
 
@@ -277,21 +289,20 @@ int main(int argc, char* argv[])
 
 
 
-					string sb = total;
 					// buff = repl.replaceBack(sb);
 					//buff = repl.modify(sb);
 
 					//send to browser
-
-					cout<<sb.length()<<endl;
-					int bytesSend = send(fds[i], sb.c_str(), 500000, 0);
-					if(bytesSend <= 0){
-						cout << "Error sending to browser" << endl;
-						exit(1);
-					}
-					else{
-						cout<<"Send back to browser:\n"<<bytesSend<<endl;
-					}
+					// while(total_bytes > 0){
+					// 	int bytesSend = send(fds[i], total.c_str(), 500000, 0);
+					// 	if(bytesSend <= 0){
+					// 		cout << "Error sending to browser" << endl;
+					// 		exit(1);
+					// 	}
+					// 	else{
+					// 		cout<<"Send back to browser:\n"<<bytesSend<<endl;
+					// 	}
+					// }
 				} 
 			}
 		}
