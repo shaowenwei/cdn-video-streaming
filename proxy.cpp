@@ -199,13 +199,16 @@ int main(int argc, char* argv[])
 					string buff = buf;
 					pre_seg = seg;
 					seg = find_num.seg_num(buff);
+					cout << "Seg:" << seg <<endl;
 					frag = find_num.frag_num(buff);
+					cout << "frag: " << frag << endl;
 					if(seg != 0 && frag != 0){
 						if(seg == (pre_seg + 1)) {
 							end = chrono::system_clock::now();
 							elapsed_seconds = end-start;
                 			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
                 			cout << "T_cur: " << T_cur << endl;
+                			cout << "Chunk: " << chunk << endl;
                 			throughput = chunk/T_cur;
                 			cout << "throughput: " << throughput << endl;
 
@@ -252,8 +255,8 @@ int main(int argc, char* argv[])
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
-						cout << "header length: " << header << "\nbody length: " << (bytesRecv - header) << "\ncontent length: " << content << "\nremain: " << remain << endl;
-						cout << "bytesRecv: " << bytesRecv << endl;
+						//cout << "header length: " << header << "\nbody length: " << (bytesRecv - header) << "\ncontent length: " << content << "\nremain: " << remain << endl;
+						//cout << "bytesRecv: " << bytesRecv << endl;
 						total_bytes = total_bytes+bytesRecv;
 					}
 
@@ -283,8 +286,8 @@ int main(int argc, char* argv[])
 							chunk += bytesRecv;
 							s = buf_r;
 							remain = remain - bytesRecv;
-							cout << "byte receive: " << bytesRecv << endl;
-							cout << "remain: " << remain << endl;
+							//cout << "byte receive: " << bytesRecv << endl;
+							//cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
 							//send to browser
