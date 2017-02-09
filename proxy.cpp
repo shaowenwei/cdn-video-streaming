@@ -236,6 +236,7 @@ int main(int argc, char* argv[])
 					else{
 						total_bytes = total_bytes + bytesSend;
 						//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+						cout << "Send back to browser: "<<endl;
 					}
 
 
@@ -258,7 +259,6 @@ int main(int argc, char* argv[])
 							// cout << "byte receive: " << bytesRecv << endl;
 							// cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
-
 
 
 
@@ -286,7 +286,7 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
-							cout << "Send .f4m request to web server:\n" << buff << endl;
+							cout << "Send .f4m request to web server:\n" << s_old.c_str() << endl;
 						}
 
 						ofstream myfile;
