@@ -218,8 +218,8 @@ int main(int argc, char* argv[])
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
-						cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
-						cout <<"bytesRecv: "<<bytesRecv<<endl;
+						//cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
+						//cout <<"bytesRecv: "<<bytesRecv<<endl;
 						total_bytes = total_bytes+bytesRecv;
 					}
 
@@ -235,7 +235,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						total_bytes = total_bytes + bytesSend;
-						cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+						//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 					}
 
 
@@ -255,8 +255,8 @@ int main(int argc, char* argv[])
 						else{
 							s = buf_r;
 							remain = remain - bytesRecv;
-							cout << "byte receive: " << bytesRecv << endl;
-							cout << "remain: " << remain << endl;
+							// cout << "byte receive: " << bytesRecv << endl;
+							// cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
 
@@ -270,7 +270,7 @@ int main(int argc, char* argv[])
 							}
 							else{
 								total_bytes = total_bytes + bytesSend;
-								cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+								//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 							}
 						}
 					}
