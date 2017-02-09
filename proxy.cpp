@@ -203,10 +203,13 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					char buf_r[50000];
+					char buf_r[2000];
 					Len len;
 					int remain = 0;
-					int bytesRecv = recv(serversd, &buf_r, 50000, 0);
+					int bytesRecv = recv(serversd, &buf_r, 2000, 0);
+					string total = "";
+					string s = "";
+
 					if(bytesRecv < 0){
 						cout<< "Error receiving from web server:\n" << endl;
 						cout << "Something went wrong! errno " << errno << ": ";
@@ -215,7 +218,8 @@ int main(int argc, char* argv[])
 					}
 					else{
 						cout << "Received from web server:\n" << buf_r << endl;
-						string s = buf_r;
+						s = buf_r;
+						total = total + s;
 						int body = len.body_length(s);
 						int content = len.content(s);
 						remain = content - body;
@@ -224,9 +228,11 @@ int main(int argc, char* argv[])
 					}
 
 					while(remain > 0){
-						bytesRecv = recv(serversd, &buf_r, 50000, 0);
+						bytesRecv = recv(serversd, &buf_r, 2000, 0);
+						s = buf_r;
+						total = total + s;
 						remain = remain - bytesRecv;
-						cout<<"byte receive: "<<endl;
+						cout<<"byte receive: "<<bytesRecv<<endl;
 						cout<<"remain: "<<remain<<endl;
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
@@ -256,7 +262,7 @@ int main(int argc, char* argv[])
 
 
 
-					string sb = buf_r;
+					string sb = total;
 					// buff = repl.replaceBack(sb);
 					//buff = repl.modify(sb);
 
