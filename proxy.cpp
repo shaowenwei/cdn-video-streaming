@@ -249,14 +249,14 @@ int main(int argc, char* argv[])
 							//cout << "Received from web server:\n" << buf_r << endl;
 
 							//send to browser
-							int bytesSend = send(fds[i], buf_r, 1000, 0);
-							if(bytesSend <= 0){
-								cout << "Error sending to browser" << endl;
-								exit(1);
-							}
-							else{
-								cout<<"Send back to browser:\n"<<buf_r<<endl;
-							}
+							// int bytesSend = send(fds[i], buf_r, 1000, 0);
+							// if(bytesSend <= 0){
+							// 	cout << "Error sending to browser" << endl;
+							// 	exit(1);
+							// }
+							// else{
+							// 	cout<<"Send back to browser:\n"<<buf_r<<endl;
+							// }
 						}
 					}
 
@@ -277,19 +277,21 @@ int main(int argc, char* argv[])
 
 
 
-					// string sb = total;
-					// // buff = repl.replaceBack(sb);
-					// //buff = repl.modify(sb);
+					string sb = total;
+					// buff = repl.replaceBack(sb);
+					//buff = repl.modify(sb);
 
-					// //send to browser
-					// int bytesSend = send(fds[i], sb.c_str(), sb.length(), 0);
-					// if(bytesSend <= 0){
-					// 	cout << "Error sending to browser" << endl;
-					// 	exit(1);
-					// }
-					// else{
-					// 	cout<<"Send back to browser:\n"<<sb<<endl;
-					// }
+					//send to browser
+
+
+					int bytesSend = send(fds[i], sb.c_str(), 500000, 0);
+					if(bytesSend <= 0){
+						cout << "Error sending to browser" << endl;
+						exit(1);
+					}
+					else{
+						cout<<"Send back to browser:\n"<<bytesSend<<endl;
+					}
 				} 
 			}
 		}
