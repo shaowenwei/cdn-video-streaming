@@ -168,8 +168,8 @@ int main(int argc, char* argv[])
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
-					char buf[1000] = "";
-					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
+					char buf[500] = "";
+					int bytesRecvd = recv(fds[i], &buf, 500, 0);
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving bytes" << endl;
@@ -228,7 +228,7 @@ int main(int argc, char* argv[])
 					}
 
 					while(remain > 0){
-						bytesRecv = recv(serversd, &buf_r, 1000, 0);
+						bytesRecv = recv(serversd, &buf_r, 500, 0);
 						s = buf_r;
 						total = total + s;
 						remain = remain - bytesRecv;
