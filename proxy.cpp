@@ -166,7 +166,8 @@ int main(int argc, char* argv[])
         int frag = 9999;
         int pre_seg = 9999;
         int chunk = 0;
-        double T_cur;
+        float T_cur = 0;
+        float throughput = 0;
         Chunk find_num;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
@@ -199,8 +200,11 @@ int main(int argc, char* argv[])
 						if(seg == (pre_seg + 1)) {
 							end = chrono::system_clock::now();
 							elapsed_seconds = end-start;
-							T_cur = chunk/elapsed_seconds.count();
-                			T_cur = alpha * chunk/elapsed_seconds.count() + (1-alpha) * T_cur; 
+                			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
+                			cout << "T_cur: " << T_cur << endl;
+                			throughput = chunk/T_cur;
+                			cout << "throughput: " << throughput << endl;
+
 						}
 						if(frag == 1){
 							start = chrono::system_clock::now();
