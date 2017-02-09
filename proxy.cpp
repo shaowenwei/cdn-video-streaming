@@ -213,11 +213,8 @@ int main(int argc, char* argv[])
                 			cout << "Chunk: " << chunk << endl;
                 			throughput = chunk * 8/(T_cur * 1000000);
                 			cout << "throughput: " << throughput << "Mbps" << endl;
+                			start = chrono::system_clock::now();
 
-						}
-						if(frag == 1){
-							start = chrono::system_clock::now();
-							chunk = 0;
 						}
 					}
 
