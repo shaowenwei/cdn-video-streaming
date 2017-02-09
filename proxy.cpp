@@ -220,6 +220,7 @@ int main(int argc, char* argv[])
 						int content = len.content(s);
 						int body = bytesRecv - header;
 						remain = content - body;
+						cout<<"body length: "<<body<<"content length: "<<content<<"header length: "<<header<<"remain: "<<remain<<endl;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
