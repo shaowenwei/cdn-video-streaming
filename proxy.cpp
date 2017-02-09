@@ -184,19 +184,19 @@ int main(int argc, char* argv[])
 					}
 
 					// receive from web server
-					int bytesRecv = recv(serversd, &buf, 500000, 0);
+					char buf_r[500000] = "";
+					int bytesRecv = recv(serversd, &buf_r, 500000, 0);
 					if(bytesRecv < 0){
 						cout<< "Error receiving from web server: \n" << endl;
 						cout << "Something went wrong! errno " << errno << ": ";
         				cout << strerror(errno) << endl;
-
-						//exit(1);
+						exit(1);
 					}
 					else{
-						cout << "Received from web server:\n" << buf << endl;
+						cout << "Received from web server:\n" << buf_r << endl;
 					}
 
-					string sb = buf;
+					string sb = buf_r;
 					// buff = repl.replaceBack(sb);
 					//buff = repl.modify(sb);
 
