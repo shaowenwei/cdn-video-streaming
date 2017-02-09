@@ -238,7 +238,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						total_bytes = total_bytes+bytesSend;
-						cout<<"Send back to browser:\n"<<total_bytes<<endl;
+						cout<<"Send back to browser: "<<total_bytes<<" bytes"<<endl;
 					}
 
 
@@ -267,7 +267,7 @@ int main(int argc, char* argv[])
 							}
 							else{
 								total_bytes = total_bytes+bytesSend;
-								cout<<"Send back to browser:\n"<<total_bytes<<endl;
+								cout<<"Send back to browser: "<<total_bytes<<" bytes"<<endl;
 							}
 						}
 					}
