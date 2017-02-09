@@ -143,7 +143,7 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
-		Repl repl(ipserver, portNumServer, portNum);
+		//Repl repl(ipserver, portNumServer, portNum);
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
@@ -166,12 +166,12 @@ int main(int argc, char* argv[])
 						cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
-					string s = buf;
-					string bu = repl.replace(s);
-					string buff = bu;
+					string buff = buf;
+					//string bu = repl.replace(s);
+					//string buff = bu;
 
-					if(bu.find("Referer: ") != string::npos)
-						buff = repl.modify(bu);
+					// if(bu.find("Referer: ") != string::npos)
+					// 	buff = repl.modify(bu);
 
 					//send to web server 
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
@@ -187,7 +187,7 @@ int main(int argc, char* argv[])
 					char buf_r[500000] = "";
 					int bytesRecv = recv(serversd, &buf_r, 500000, 0);
 					if(bytesRecv < 0){
-						cout<< "Error receiving from web server: \n" << endl;
+						cout<< "Error receiving from web server:\n" << endl;
 						cout << "Something went wrong! errno " << errno << ": ";
         				cout << strerror(errno) << endl;
 						exit(1);
