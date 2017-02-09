@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <cassert>
+#include <cerrno>
 
 using namespace std;
 
@@ -185,13 +186,9 @@ int main(int argc, char* argv[])
 					// receive from web server
 					int bytesRecv = recv(serversd, &buf, 500000, 0);
 					if(bytesRecv < 0){
-						cout << "Error receiving from web server" << buf <<endl;
-						bytesRecv = recv(serversd, &buf, 500000, 0);
-						cout<<"1"<<buf<<endl;
-						bytesRecv = recv(serversd, &buf, 500000, 0);
-						cout<<"2"<<buf<<endl;
-						bytesRecv = recv(serversd, &buf, 500000, 0);
-						cout<<"3"<<buf<<endl;
+						cout<< "Error receiving from web server: \n" << endl;
+						cout << "Something went wrong! errno " << errno << ": ";
+        				cout << strerror(errno) << endl;
 
 						//exit(1);
 					}
