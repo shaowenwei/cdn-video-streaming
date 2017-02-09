@@ -194,21 +194,22 @@ int main(int argc, char* argv[])
 					}
 					else{
 						cout << "Received from web server:\n" << buf_r << endl;
+						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
 
 
 
-					int bytes= recv(serversd, &buf_r, 50000, 0);
-					if(bytes < 0){
-						cout<< "Error receiving from web server:\n" << endl;
-						cout << "Something went wrong! errno " << errno << ": ";
-        				cout << strerror(errno) << endl;
-						exit(1);
-					}
-					else{
-						cout << "Received from web server:\n" << buf_r << endl;
-					}
+					// int bytes= recv(serversd, &buf_r, 50000, 0);
+					// if(bytes < 0){
+					// 	cout<< "Error receiving from web server:\n" << endl;
+					// 	cout << "Something went wrong! errno " << errno << ": ";
+    				//  cout << strerror(errno) << endl;
+					// 	exit(1);
+					// }
+					// else{
+					// 	cout << "Received from web server:\n" << buf_r << endl;
+					// }
 
 
 
