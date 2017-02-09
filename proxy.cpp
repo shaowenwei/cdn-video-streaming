@@ -228,7 +228,7 @@ int main(int argc, char* argv[])
 					}
 
 					while(remain > 0){
-						bytesRecv = recv(serversd, &buf_r, 2000, 0);
+						bytesRecv = recv(serversd, &buf_r, 20000, 0);
 						s = buf_r;
 						total = total + s;
 						remain = remain - bytesRecv;
