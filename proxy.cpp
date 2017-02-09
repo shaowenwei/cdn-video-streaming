@@ -53,7 +53,7 @@ public:
 
 class Len{
 public:
-    int header_length(string s){
+    int body_length(string s){
         size_t found = s.find("\r\n\r\n");
         string sub = s.substr(found+4);
         return (int) sub.length();
@@ -216,11 +216,10 @@ int main(int argc, char* argv[])
 					else{
 						cout << "Received from web server:\n" << buf_r << endl;
 						string s = buf_r;
-						int header = len.header_length(s);
+						int body = len.body_length(s);
 						int content = len.content(s);
-						int body = bytesRecv - header;
 						remain = content - body;
-						cout<<"body length: "<<body<<"content length: "<<content<<"header length: "<<header<<"remain: "<<remain<<endl;
+						cout<<"body length: "<<body<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
