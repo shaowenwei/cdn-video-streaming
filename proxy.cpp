@@ -197,8 +197,10 @@ int main(int argc, char* argv[])
 						cout <<"bytesRecv: "<<bytesRecv<<endl;
 					}
 
-					while(bytesRecv == 50000){
+					int count = bytesRecv; 
+					while(bytesRecv >= 1000){
 						bytesRecv = recv(serversd, &buf_r, 50000, 0);
+						count += bytesRecv;
 						if(bytesRecv < 0){
 							cout<< "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -209,6 +211,7 @@ int main(int argc, char* argv[])
 							cout << "Received from web server:\n" << buf_r << endl;
 						}
 					}
+					cout<<"total count is: "<<count<<endl;
 
 
 
