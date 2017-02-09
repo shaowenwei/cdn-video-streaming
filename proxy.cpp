@@ -14,43 +14,6 @@
 
 using namespace std;
 
-class Repl{
-public:
-    string ip;
-    int portNumServer;
-    int listen_port;
-    Repl(char *ip, int portNumServer, int listen_port){
-        this->ip = ip;
-        this->portNumServer = portNumServer;
-        this->listen_port = listen_port;
-    }
-    
-    string replace(string s){
-        size_t found = s.find("Host: ");
-        size_t f = s.find("User-Agent: ");
-        s.erase(s.begin()+found+6, s.begin()+f);
-        s.insert(found+6, ip+"\r\n");
-        return s;
-    }
-    
-    string replaceBack(string s){
-        size_t found = s.find("Location: ");
-        size_t f = s.find("Content-Type: ");
-        s.erase(s.begin()+found+10, s.begin()+f);
-        s.insert(found+10, "http://localhost:"+to_string(listen_port)+"/index.html\r\n");
-        return s;
-    }
-
-    string modify(string s){
-	    size_t found = s.find("Referer: ");
-	    size_t f = s.find("Connection: ");
-	    s.erase(s.begin()+found+9, s.begin()+f);
-	    s.insert(found+9, "http://"+ip+"/\r\n");
-	    return s;
-    }
-    
-};
-
 class Len{
 public:
     int header_length(string s){
@@ -187,11 +150,6 @@ int main(int argc, char* argv[])
 					}
 
 					string buff = buf;
-					//string bu = repl.replace(s);
-					//string buff = bu;
-
-					// if(bu.find("Referer: ") != string::npos)
-					// 	buff = repl.modify(bu);
 
 					//send to web server 
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
@@ -237,7 +195,7 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						total_bytes = total_bytes+bytesSend;
+						total_bytes = total_bytes + bytesSend;
 						cout<<"Send back to browser: "<<total_bytes<<" bytes"<<endl;
 					}
 
@@ -247,7 +205,7 @@ int main(int argc, char* argv[])
 						//recv from webserver
 						bytesRecv = recv(serversd, &buf_r, 1000, 0);
 						if(bytesRecv < 0){
-							cout<< "Error receiving from web server:\n" << endl;
+							cout << "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
 	    				 	cout << strerror(errno) << endl;
 							exit(1);
@@ -255,8 +213,8 @@ int main(int argc, char* argv[])
 						else{
 							s = buf_r;
 							remain = remain - bytesRecv;
-							cout<<"byte receive: "<<bytesRecv<<endl;
-							cout<<"remain: "<<remain<<endl;
+							cout << "byte receive: " << bytesRecv << endl;
+							cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
 							//send to browser
@@ -266,46 +224,15 @@ int main(int argc, char* argv[])
 								exit(1);
 							}
 							else{
-								total_bytes = total_bytes+bytesSend;
-								cout<<"Send back to browser: "<<total_bytes<<" bytes"<<endl;
+								total_bytes = total_bytes + bytesSend;
+								cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 							}
 						}
 					}
 
-
-
-
-					// int bytes= recv(serversd, &buf_r, 50000, 0);
-					// if(bytes < 0){
-					// 	cout<< "Error receiving from web server:\n" << endl;
-					// 	cout << "Something went wrong! errno " << errno << ": ";
-    				//  cout << strerror(errno) << endl;
-					// 	exit(1);
-					// }
-					// else{
-					// 	cout << "Received from web server:\n" << buf_r << endl;
-					// }
-
-
-
-
-					// buff = repl.replaceBack(sb);
-					//buff = repl.modify(sb);
-
-					//send to browser
-					// while(total_bytes > 0){
-					// 	int bytesSend = send(fds[i], total.c_str(), 500000, 0);
-					// 	if(bytesSend <= 0){
-					// 		cout << "Error sending to browser" << endl;
-					// 		exit(1);
-					// 	}
-					// 	else{
-					// 		cout<<"Send back to browser:\n"<<bytesSend<<endl;
-					// 	}
-					// }
 				} 
+			
 			}
 		}
 	}
-
 }
