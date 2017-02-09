@@ -198,7 +198,7 @@ int main(int argc, char* argv[])
 					}
 
 					int count = bytesRecv; 
-					while(bytesRecv == 50000){
+					while(bytesRecv >= 3000){
 						bytesRecv = recv(serversd, &buf_r, 50000, 0);
 						count += bytesRecv;
 						if(bytesRecv < 0){
