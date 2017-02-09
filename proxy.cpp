@@ -19,19 +19,53 @@ public:
     int header_length(string s){
         size_t found = s.find("\r\n\r\n");
         string sub = s.substr(0, found+4);
-        cout<<sub<<endl;
+        cout << sub << endl;
         return (int) sub.length();
     }
     
     int content(string s){
         size_t found = s.find("Content-Length: ");
-        string sub = s.substr(found+16);
+        string sub = s.substr(found + 16);
         size_t f = sub.find("\r\n");
         sub = sub.substr(0,f);
         int res = atoi(sub.c_str());
         return res;
 
     }
+};
+
+class Chunk{
+	public:
+		int seg_num(string s)
+		{
+			size_t found = s.find("Seg");
+			if(found != string::npos) 
+			{
+				string sub = s.substr(found + 3);
+				size_t f = sub.find("-");
+				sub = sub.substr(0,f);
+				int seg = atoi(sub.c_str());
+				return seg;
+			}
+			else return 0;
+
+			
+		}
+
+		int frag_num(string s)
+		{
+			size_t found = s.find("Frag");
+			if(found != string::npos)
+			{
+				string sub = s.substr(found + 4);
+				size_t f = sub.find("\n");
+				sub = sub.substr(0,f);
+				int frag = atoi(sub.c_str());
+				return frag;
+			}
+			else return 0;
+		}
+
 };
 
 int main(int argc, char* argv[])
@@ -44,7 +78,7 @@ int main(int argc, char* argv[])
 	int portNum = atoi(argv[1]);
 	char *ipserver = argv[2];
 	int portNumServer = atoi(argv[3]);
-
+    int alpha = 1;
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	struct sockaddr_in self;
@@ -126,12 +160,20 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
-		//Repl repl(ipserver, portNumServer, portNum);
+		chrono::time_point<chrono::system_clock> start, end; 
+        chrono::duration<double> elapsed_seconds;
+        int seg =  9999;
+        int frag = 9999;
+        int pre_seg = 9999;
+        int chunk = 0;
+        double T_cur;
+        Chunk find_num;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
+					//receive from browser
 					char buf[1000] = "";
 					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
 					if(bytesRecvd < 0)
@@ -150,6 +192,23 @@ int main(int argc, char* argv[])
 					}
 
 					string buff = buf;
+					pre_seg = seg;
+					seg = find_num.seg_num(buff);
+					frag = find_num.frag_num(buff);
+					if(seg != 0 && frag != 0){
+						if(seg == (pre_seg + 1)) {
+							end = chrono::system_clock::now();
+							elapsed_seconds = end-start;
+							T_cur = chunk/elapsed_seconds.count();
+                			T_cur = alpha * chunk/elapsed_seconds.count() + (1-alpha) * T_cur; 
+						}
+						if(frag == 1){
+							start = chrono::system_clock::now();
+							chunk = 0;
+						}
+					}
+
+
 
 					//send to web server 
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
@@ -158,24 +217,26 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						cout<<"Send to web server:\n"<<buff<<endl;
+						cout << "Send to web server:\n" << buff << endl;
 					}
 
 					// receive from web server
 					char buf_r[1000];
 					Len len;
 					int remain = 0;
+					start = chrono::system_clock::now();
 					int bytesRecv = recv(serversd, &buf_r, 1000, 0);
 					string s = "";
 					int total_bytes = 0;
 
 					if(bytesRecv < 0){
-						cout<< "Error receiving from web server:\n" << endl;
+						cout << "Error receiving from web server:\n" << endl;
 						cout << "Something went wrong! errno " << errno << ": ";
         				cout << strerror(errno) << endl;
 						exit(1);
 					}
 					else{
+						chunk += bytesRecv;
 						cout << "Received from web server:\n" << buf_r << endl;
 
 						//compute length
@@ -183,8 +244,8 @@ int main(int argc, char* argv[])
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
-						cout<<"header length: "<<header<<"\nbody length: "<<(bytesRecv - header)<<"\ncontent length: "<<content<<"\nremain: "<<remain<<endl;
-						cout <<"bytesRecv: "<<bytesRecv<<endl;
+						cout << "header length: " << header << "\nbody length: " << (bytesRecv - header) << "\ncontent length: " << content << "\nremain: " << remain << endl;
+						cout << "bytesRecv: " << bytesRecv << endl;
 						total_bytes = total_bytes+bytesRecv;
 					}
 
@@ -196,7 +257,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						total_bytes = total_bytes + bytesSend;
-						cout<<"Send back to browser: "<<total_bytes<<" bytes"<<endl;
+						cout << "Send back to browser: " << total_bytes << " bytes" << endl;
 					}
 
 
@@ -211,6 +272,7 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
+							chunk += bytesRecv;
 							s = buf_r;
 							remain = remain - bytesRecv;
 							cout << "byte receive: " << bytesRecv << endl;
