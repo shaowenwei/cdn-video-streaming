@@ -184,6 +184,17 @@ int main(int argc, char* argv[])
 	// Keep track of each file descriptor accepted
 	vector<int> fds;
 
+	chrono::time_point<chrono::system_clock> start, end; 
+	chrono::duration<double> elapsed_seconds;
+	int seg =  0;
+	int frag = 0;
+	int pre_seg = 0;
+	int chunk = 0;
+	double T_cur = 0;
+	double throughput = 0;
+	double bitrate = 0;
+	Chunk find_num;
+
 	while(true)
 	{
 		// Set up the readSet
@@ -218,16 +229,6 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
-		chrono::time_point<chrono::system_clock> start, end; 
-		chrono::duration<double> elapsed_seconds;
-		int seg =  0;
-		int frag = 0;
-		int pre_seg = 0;
-		int chunk = 0;
-		double T_cur = 0;
-		double throughput = 0;
-		double bitrate = 0;
-		Chunk find_num;
 
 
 		for(int i = 0; i < (int) fds.size(); ++i)
