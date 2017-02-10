@@ -258,8 +258,6 @@ int main(int argc, char* argv[])
 					}
 
 
-
-
 					//send request to server
 					string buff = buf;
 					pre_seg = seg;
