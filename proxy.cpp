@@ -269,14 +269,17 @@ int main(int argc, char* argv[])
 					if(seg != 0 && frag != 0){
 						if(seg == (pre_seg + 1)) {
 							end = chrono::system_clock::now();
-							elapsed_seconds = end-start;
-                			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
-                			cout << "T_cur: " << T_cur <<"s"<< endl;
-                			cout << "Chunk: " << chunk << endl;
-                			throughput = chunk * 8/(T_cur * 1000);
-                			cout << "throughput: " << throughput << "Kbps" << endl;
-                			bitrate = throughput/1.5;
-                			cout << "bitrate: " << bitrate << endl;
+		        			elapsed_seconds = end-start;
+		        			throughput = chunk * 8/(elapsed_seconds.count() * 1000);
+		                    T_cur = alpha * throughput + (1-alpha) * T_cur;
+		                    cout << "duration: " << elapsed_seconds.count() << "s" << endl;
+		                    cout << "tput: " << throughput << "Kbps" << endl;
+		                    cout << "avg-tput: " << T_cur <<"Kbps"<< endl;
+		                    cout << "Chunk: " << chunk << endl;
+		                    //throughput = chunk * 8/(T_cur * 1000);
+		                    //cout << "throughput: " << throughput << "Kbps" << endl;
+		                    bitrate = T_cur/1.5;
+		                    cout << "bitrate: " << bitrate << endl;
    							for(int i = get_bitrate.size()-1; i != -1; --i){
    								if(get_bitrate[i] < bitrate){
    									bitrate = get_bitrate[i];
