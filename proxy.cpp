@@ -79,7 +79,7 @@ class Chunk{
 				size_t f = sub.find("-");
 				sub = sub.substr(0,f);
 				int seg = atoi(sub.c_str());
-				cout << "Seg:" << seg <<endl;
+				//cout << "Seg:" << seg <<endl;
 				return seg;
 			}
 			else return 0;
@@ -96,7 +96,7 @@ class Chunk{
 				size_t f = sub.find(" ");
 				sub = sub.substr(0,f);
 				int frag = atoi(sub.c_str());
-				cout << "frag:" << frag <<endl;
+				//cout << "frag:" << frag <<endl;
 				return frag;
 			}
 			else return 0;
@@ -262,10 +262,11 @@ int main(int argc, char* argv[])
 					//send request to server
 					string buff = buf;
 					pre_seg = seg;
+					cout << "pre-Seg:" << pre_seg <<endl;
 					seg = find_num.seg_num(buff);
 					cout << "Seg:" << seg <<endl;
 					frag = find_num.frag_num(buff);
-					cout << "frag: " << frag << endl;
+					cout << "frag:" << frag << endl;
 					if(seg != 0 && frag != 0){
 						if(seg == (pre_seg + 1)) {
 							end = chrono::system_clock::now();
@@ -293,6 +294,7 @@ int main(int argc, char* argv[])
 						//modify header
 						if(pre_seg != 0 && pre_seg != 1){
 							Modify modify;
+							cout << "mo-bitrate:" << bitrate << endl;
 							buff = modify.bitrate_modify(buff, bitrate);
 							cout << "after modify: \n" << buff << endl;
 						}
