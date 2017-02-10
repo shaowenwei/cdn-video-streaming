@@ -49,7 +49,24 @@ public:
         s.insert(start, in);
         return s;
     }
+    
+    string bitrate_modify(string s, int bitrate){
+        size_t start = s.find("Seg");
+        string sub = s.substr(0, start);
+        int end = 0;
+        string res = "";
+        for(int i = sub.length() - 1; i != -1; i--){
+            if(sub[i] == '/'){
+                end = i;
+                break;
+            }
+        }
+        string bit = to_string(bitrate);
+        s.replace(end+1, start-end-1, bit);
+        return s;
+    }
 };
+
 
 class Chunk{
 	public:
@@ -202,15 +219,15 @@ int main(int argc, char* argv[])
 			}
 		}
 		chrono::time_point<chrono::system_clock> start, end; 
-        chrono::duration<double> elapsed_seconds;
-        int seg =  0;
-        int frag = 0;
-        int pre_seg = 0;
-        int chunk = 0;
-        double T_cur = 0;
-        double throughput = 0;
-        double bitrate = 0;
-        Chunk find_num;
+		chrono::duration<double> elapsed_seconds;
+		int seg =  0;
+		int frag = 0;
+		int pre_seg = 0;
+		int chunk = 0;
+		double T_cur = 0;
+		double throughput = 0;
+		double bitrate = 0;
+		Chunk find_num;
 
 
 		for(int i = 0; i < (int) fds.size(); ++i)
@@ -239,6 +256,10 @@ int main(int argc, char* argv[])
 						//cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
+
+
+
+					//send request to server
 					string buff = buf;
 					pre_seg = seg;
 					seg = find_num.seg_num(buff);
@@ -266,12 +287,17 @@ int main(int argc, char* argv[])
                 			start = chrono::system_clock::now();
 
 						}
+						//modify header
+						if(pre_seg != 0 && pre_seg != 1){
+							Modify modify;
+							buff = modify.bitrate_modify(buff, bitrate);
+							cout << "after modify: \n" << buff << endl;
+						}
 					}
 
 					// check if request .f4m file change to _nolist.f4m
 					bool no_list = false;
 					string s_old = "";
-
 					if(buff.find(".f4m") != string::npos){
 						cout<<"detect .f4m file"<<endl;
 						Modify modify;
@@ -279,6 +305,7 @@ int main(int argc, char* argv[])
 						buff = modify.findf4m(buff);
 					    no_list = true;
 					}
+
 
 
 
@@ -358,7 +385,7 @@ int main(int argc, char* argv[])
 							remain = remain - bytesRecv;
 							// cout << "byte receive: " << bytesRecv << endl;
 							// cout << "remain: " << remain << endl;
-							//cout << "Received from web server:\n" << buf_r << endl;
+							// cout << "Received from web server:\n" << buf_r << endl;
 
 							//send response to browser
 							bytesSend = send(fds[i], buf_r, packet_len, 0);
