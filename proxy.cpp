@@ -259,6 +259,7 @@ int main(int argc, char* argv[])
    							for(int i = get_bitrate.size()-1; i != -1; --i){
    								if(get_bitrate[i] < bitrate){
    									bitrate = get_bitrate[i];
+   									break;
    								}
    							}
    							cout << "bitrate chosen:" << bitrate << endl; 
