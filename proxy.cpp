@@ -12,6 +12,10 @@
 #include <cassert>
 #include <cerrno>
 #include <fstream>
+#include <time.h>
+#include <chrono>
+#include <sys/wait.h>
+#include <signal.h>
 
 using namespace std;
 
@@ -47,6 +51,62 @@ public:
     }
 };
 
+class Chunk{
+	public:
+		int seg_num(string s)
+		{
+			size_t found = s.find("Seg");
+			if(found != string::npos) 
+			{
+				string sub = s.substr(found + 3);
+				size_t f = sub.find("-");
+				sub = sub.substr(0,f);
+				int seg = atoi(sub.c_str());
+				cout << "Seg:" << seg <<endl;
+				return seg;
+			}
+			else return 0;
+
+			
+		}
+
+		int frag_num(string s)
+		{
+			size_t found = s.find("Frag");
+			if(found != string::npos)
+			{
+				string sub = s.substr(found + 4);
+				size_t f = sub.find(" ");
+				sub = sub.substr(0,f);
+				int frag = atoi(sub.c_str());
+				cout << "frag:" << frag <<endl;
+				return frag;
+			}
+			else return 0;
+		}
+
+};
+
+vector<int> getBitrate(){
+    vector<int> res;
+    ifstream myReadFile;
+    myReadFile.open("f4m.txt");
+    string output;
+    if (myReadFile.is_open()) {
+        while (!myReadFile.eof()) {
+            myReadFile >> output;
+            if(output.find("bitrate=") != string::npos){
+                size_t start = output.find("bitrate=");
+                output = output.substr(start+9);
+                output = output.substr(0, output.size()-1);
+                res.push_back(atoi(output.c_str()));
+            }
+        }
+    }
+    myReadFile.close();
+    return res;
+}
+
 int main(int argc, char* argv[])
 {
 	if(argc != 4)
@@ -57,6 +117,8 @@ int main(int argc, char* argv[])
 	int portNum = atoi(argv[1]);
 	char *ipserver = argv[2];
 	int portNumServer = atoi(argv[3]);
+	int alpha = 1;
+	vector<int> bitrate;
 
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -139,6 +201,17 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 			}
 		}
+		chrono::time_point<chrono::system_clock> start, end; 
+        chrono::duration<double> elapsed_seconds;
+        int seg =  0;
+        int frag = 0;
+        int pre_seg = 0;
+        int chunk = 0;
+        double T_cur = 0;
+        double throughput = 0;
+        Chunk find_num;
+
+
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
@@ -164,7 +237,26 @@ int main(int argc, char* argv[])
 					else{
 						cout<< "Received from browser:\n"<<buf<<endl;
 					}
+
 					string buff = buf;
+					pre_seg = seg;
+					seg = find_num.seg_num(buff);
+					cout << "Seg:" << seg <<endl;
+					frag = find_num.frag_num(buff);
+					cout << "frag: " << frag << endl;
+					if(seg != 0 && frag != 0){
+						if(seg == (pre_seg + 1)) {
+							end = chrono::system_clock::now();
+							elapsed_seconds = end-start;
+                			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
+                			cout << "T_cur: " << T_cur <<"s"<< endl;
+                			cout << "Chunk: " << chunk << endl;
+                			throughput = chunk * 8/(T_cur * 1000000);
+                			cout << "throughput: " << throughput << "Mbps" << endl;
+                			start = chrono::system_clock::now();
+
+						}
+					}
 
 					// check if request .f4m file change to _nolist.f4m
 					bool no_list = false;
@@ -211,6 +303,7 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
+						chunk += bytesRecv;
 						cout << "Received from web server:\n" << buf_r << endl;
 
 						//compute length
@@ -222,7 +315,6 @@ int main(int argc, char* argv[])
 						//cout <<"bytesRecv: "<<bytesRecv<<endl;
 						total_bytes = total_bytes+bytesRecv;
 					}
-
 
 
 
@@ -254,6 +346,7 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
+							chunk += bytesRecv;
 							s = buf_r;
 							remain = remain - bytesRecv;
 							// cout << "byte receive: " << bytesRecv << endl;
@@ -327,14 +420,10 @@ int main(int argc, char* argv[])
 							}
 						}
 						myfile.close();
+						bitrate = getBitrate();
+						no_list = false;
 					}
-
-
-
-
-
 				} 
-			
 			}
 		}
 	}
