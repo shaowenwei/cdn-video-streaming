@@ -193,7 +193,6 @@ int main(int argc, char* argv[])
 	double T_cur = 0;
 	double throughput = 0;
 	double bitrate = 0;
-	Chunk find_num;
 
 	while(true)
 	{
@@ -257,7 +256,7 @@ int main(int argc, char* argv[])
 						//cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
-
+					Chunk find_num;
 					//send request to server
 					string buff = buf;
 					pre_seg = seg;
