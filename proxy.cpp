@@ -236,7 +236,7 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<< "Received from browser:\n"<<buf<<endl;
+						//cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
 					string buff = buf;
@@ -255,11 +255,13 @@ int main(int argc, char* argv[])
                 			throughput = chunk * 8/(T_cur * 1000);
                 			cout << "throughput: " << throughput << "Kbps" << endl;
                 			bitrate = throughput/1.5;
+                			cout << "bitrate: " << bitrate << endl;
    							for(int i = get_bitrate.size()-1; i != -1; --i){
    								if(get_bitrate[i] < bitrate){
    									bitrate = get_bitrate[i];
    								}
    							}
+   							cout << "bitrate chosen:" << bitrate << endl; 
                 			start = chrono::system_clock::now();
 
 						}
@@ -286,7 +288,7 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						cout << "Send to web server:\n" << buff << endl;
+						//cout << "Send to web server:\n" << buff << endl;
 					}
 
 
@@ -308,7 +310,7 @@ int main(int argc, char* argv[])
 					}
 					else{
 						chunk += bytesRecv;
-						cout << "Received from web server:\n" << buf_r << endl;
+						//cout << "Received from web server:\n" << buf_r << endl;
 
 						//compute length
 						s = buf_r;
@@ -381,7 +383,7 @@ int main(int argc, char* argv[])
 							exit(1);
 						}
 						else{
-							cout << "Send .f4m request to web server:\n" << s_old.c_str() << endl;
+							//cout << "Send .f4m request to web server:\n" << s_old.c_str() << endl;
 						}
 
 						ofstream myfile;
@@ -399,7 +401,7 @@ int main(int argc, char* argv[])
 						}
 						else{
 							myfile << buf_h;
-							cout << "byte receive: " << bytesR << endl;
+							//cout << "byte receive: " << bytesR << endl;
 							s1 = buf_h;
 							int header = len.header_length(s1);
 							int content = len.content(s1);
@@ -416,8 +418,8 @@ int main(int argc, char* argv[])
 							}
 							else{
 								rem = rem - bytesR;
-								cout << "byte receive: " << bytesR << endl;
-								cout << "remain: " << rem << endl;
+								//cout << "byte receive: " << bytesR << endl;
+								//cout << "remain: " << rem << endl;
 								myfile << buf_h;
 							}
 						}
