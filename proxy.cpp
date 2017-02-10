@@ -118,7 +118,7 @@ int main(int argc, char* argv[])
 	char *ipserver = argv[2];
 	int portNumServer = atoi(argv[3]);
 	int alpha = 1;
-	vector<int> bitrate;
+	vector<int> get_bitrate;
 
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -209,6 +209,7 @@ int main(int argc, char* argv[])
         int chunk = 0;
         double T_cur = 0;
         double throughput = 0;
+        double bitrate = 0;
         Chunk find_num;
 
 
@@ -251,8 +252,14 @@ int main(int argc, char* argv[])
                 			T_cur = alpha * elapsed_seconds.count() + (1-alpha) * T_cur;
                 			cout << "T_cur: " << T_cur <<"s"<< endl;
                 			cout << "Chunk: " << chunk << endl;
-                			throughput = chunk * 8/(T_cur * 1000000);
-                			cout << "throughput: " << throughput << "Mbps" << endl;
+                			throughput = chunk * 8/(T_cur * 1000);
+                			cout << "throughput: " << throughput << "Kbps" << endl;
+                			bitrate = throughput/1.5;
+   							for(int i = get_bitrate.size()-1; i != -1; --i){
+   								if(get_bitrate[i] < bitrate){
+   									bitrate = get_bitrate[i];
+   								}
+   							}
                 			start = chrono::system_clock::now();
 
 						}
@@ -269,9 +276,6 @@ int main(int argc, char* argv[])
 						buff = modify.findf4m(buff);
 					    no_list = true;
 					}
-
-
-
 
 
 
@@ -353,8 +357,6 @@ int main(int argc, char* argv[])
 							// cout << "remain: " << remain << endl;
 							//cout << "Received from web server:\n" << buf_r << endl;
 
-
-
 							//send response to browser
 							bytesSend = send(fds[i], buf_r, packet_len, 0);
 							if(bytesSend <= 0){
@@ -420,7 +422,8 @@ int main(int argc, char* argv[])
 							}
 						}
 						myfile.close();
-						bitrate = getBitrate();
+						get_bitrate = getBitrate();
+						sort(get_bitrate.begin(), get_bitrate.end());
 						no_list = false;
 					}
 				} 
