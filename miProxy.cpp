@@ -145,6 +145,8 @@ int main(int argc, char* argv[])
 	char *ipserver = argv[4];
 	int portNumServer = atoi(argv[5]);
 	vector<int> get_bitrate;
+	ofstream logfile;
+	logfile.open(log_name);
 
 
 	// Bind server to sd and set up listen server
@@ -204,7 +206,7 @@ int main(int argc, char* argv[])
 	double throughput = 0;
 	double bitrate = 0;
 	//create log file <duration> <tput> <avg-tput> <bitrate> <server-ip> <chunkname>
-	ofstream logfile;
+
 	while(true)
 	{
 		// Set up the readSet
