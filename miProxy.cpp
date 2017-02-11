@@ -131,7 +131,7 @@ vector<int> getBitrate(){
 
 int main(int argc, char* argv[])
 {
-	if(argc != 5)
+	if(argc != 6)
 	{
 		cout << "Error: Usage is ./server <log> <alpha> <listen_port> <server_ip> <server_port>\n";
 		return 1;
