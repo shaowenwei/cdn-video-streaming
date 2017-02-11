@@ -245,7 +245,6 @@ int main(int argc, char* argv[])
 
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
-			logfile.open(log_path, fstream::app);
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
