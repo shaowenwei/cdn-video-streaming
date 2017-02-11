@@ -133,16 +133,17 @@ int main(int argc, char* argv[])
 {
 	if(argc != 5)
 	{
-		cout << "Error: Usage is ./server <log> <listen_port> <server_ip> <server_port>\n";
+		cout << "Error: Usage is ./server <log> <alpha> <listen_port> <server_ip> <server_port>\n";
 		return 1;
 	}
 	char *log_path = argv[1];
 	string log_name = log_path;
 	log_name = log_name+"log.txt";
-	int portNum = atoi(argv[2]);
-	char *ipserver = argv[3];
-	int portNumServer = atoi(argv[4]);
-	int alpha = 1;
+	cout<<log_name<<endl;
+	int portNum = atoi(argv[3]);
+	char *ipserver = argv[4];
+	int portNumServer = atoi(argv[5]);
+	float alpha = atoi(argv[2]);
 	vector<int> get_bitrate;
 
 
@@ -204,7 +205,6 @@ int main(int argc, char* argv[])
 	double bitrate = 0;
 	//create log file <duration> <tput> <avg-tput> <bitrate> <server-ip> <chunkname>
 	ofstream logfile;
-	logfile.open(log_path);
 	while(true)
 	{
 		// Set up the readSet
@@ -243,6 +243,7 @@ int main(int argc, char* argv[])
 
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
+			logfile.open(log_path, fstream::app);
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
@@ -260,6 +261,7 @@ int main(int argc, char* argv[])
 					else if(bytesRecvd == 0)
 					{
 						cout << "Connection closed" << endl;
+						logfile.close();
 						fds.erase(fds.begin() + i);
 						break;
 					}
@@ -477,5 +479,4 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
-	logfile.close();
 }
