@@ -124,18 +124,25 @@ vector<int> getBitrate(){
     return res;
 }
 
+
+
+
+
+
 int main(int argc, char* argv[])
 {
-	if(argc != 4)
+	if(argc != 5)
 	{
-		cout << "Error: Usage is ./server <listen_port> <server_ip> <server_port>\n";
+		cout << "Error: Usage is ./server <log> <listen_port> <server_ip> <server_port>\n";
 		return 1;
 	}
-	int portNum = atoi(argv[1]);
-	char *ipserver = argv[2];
-	int portNumServer = atoi(argv[3]);
+	char *log_path = argv[1];
+	int portNum = atoi(argv[2]);
+	char *ipserver = argv[3];
+	int portNumServer = atoi(argv[4]);
 	int alpha = 1;
 	vector<int> get_bitrate;
+
 
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -193,7 +200,9 @@ int main(int argc, char* argv[])
 	double T_cur = 0;
 	double throughput = 0;
 	double bitrate = 0;
-
+	//create log file <duration> <tput> <avg-tput> <bitrate> <server-ip> <chunkname>
+	ofstream logfile;
+	logfile.open(log_path);
 	while(true)
 	{
 		// Set up the readSet
@@ -285,7 +294,10 @@ int main(int argc, char* argv[])
    									break;
    								}
    							}
-   							cout << "bitrate chosen:" << bitrate << endl; 
+   							cout << "bitrate chosen:" << bitrate << endl;
+
+							logfile <<" "<< elapsed_seconds.count() <<" "<< throughput <<" "<<T_cur<<" "<<bitrate<<" "<<ipserver<<" "<<"Seg"<<seg<<"-Frag"<<frag<<endl;
+
                 			start = chrono::system_clock::now();
 
 						}
@@ -463,4 +475,5 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
+	logfile.close();
 }

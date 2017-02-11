@@ -1,16 +1,16 @@
 CC = g++
 CFLAGS = -g -Wall -std=c++11
 
-all: proxy #server client
+all: miProxy #server client
 
 # server: server.cpp
 # 	$(CC) $(CFLAGS) -o $@ $^
 
-proxy: proxy.cpp
+proxy: miProxy.cpp
 	$(CC) $(CFLAGS) -o $@ $^
 
 # client: client.cpp
 # 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	-rm -f *.o *~ *core* proxy #server client
+	-rm -f *.o *~ *core* miProxy #server client
