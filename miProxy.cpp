@@ -263,7 +263,6 @@ int main(int argc, char* argv[])
 					else if(bytesRecvd == 0)
 					{
 						cout << "Connection closed" << endl;
-						logfile.close();
 						fds.erase(fds.begin() + i);
 						break;
 					}
@@ -301,12 +300,10 @@ int main(int argc, char* argv[])
    								}
    							}
    							cout << "bitrate chosen:" << bitrate << endl;
-
-							logfile <<" "<< elapsed_seconds.count() <<" "<< throughput <<" "<<T_cur<<" "<<bitrate<<" "<<ipserver<<" "<<"Seg"<<seg<<"-Frag"<<frag<<endl;
-
                 			start = chrono::system_clock::now();
 
 						}
+						logfile <<" "<< elapsed_seconds.count() <<" "<< throughput <<" "<<T_cur<<" "<<bitrate<<" "<<ipserver<<" "<<"Seg"<<seg<<"-Frag"<<frag<<endl;
 						//modify header
 						if(pre_seg != 0 && pre_seg != 1){
 							Modify modify;
@@ -481,4 +478,5 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
+	logfile.close();
 }
