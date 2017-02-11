@@ -137,13 +137,13 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 	char *log_path = argv[1];
+	float alpha = atoi(argv[2]);
 	string log_name = log_path;
 	log_name = log_name+"log.txt";
 	cout<<log_name<<endl;
 	int portNum = atoi(argv[3]);
 	char *ipserver = argv[4];
 	int portNumServer = atoi(argv[5]);
-	float alpha = atoi(argv[2]);
 	vector<int> get_bitrate;
 
 
