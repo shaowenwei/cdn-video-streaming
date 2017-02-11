@@ -137,6 +137,8 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 	char *log_path = argv[1];
+	string log_name = log_path;
+	log_name = log_name+"log.txt";
 	int portNum = atoi(argv[2]);
 	char *ipserver = argv[3];
 	int portNumServer = atoi(argv[4]);
