@@ -7,7 +7,7 @@ all: miProxy #server client
  #	$(CC) $(CFLAGS) -o $@ $^
 
 miProxy: miProxy.cpp
- 	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 #client: client.cpp
  #	$(CC) $(CFLAGS) -o $@ $^
