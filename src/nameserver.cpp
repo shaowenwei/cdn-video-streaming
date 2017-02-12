@@ -10,24 +10,29 @@
 #include <vector>
 #include <algorithm>
 #include <cassert>
+#include "DNSHeader.h"
+#include "DNSQuestion.h"
+#include "DNSRecord.h"
+#include "DNSResolve.h"
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	if(argc != 2)
+	if(argc <= 2)
 	{
 		cout << "Error: Usage is ./nameserver <listen_port> <ip address 1> <ip address 2> <ip address 3>...\n";
 		return 1;
 	}
 
-	//Usage is ./nameserver <listen_port> <ip address 1> <ip address 2> <ip address 3>...
 	int portNum = atoi(argv[1]);
-	vector<string> ip_lidt;
-	for(int i = 1; i != argc; i++){
+	vector<string> ip_list;
+	int index = 0;
+	for(int i = 2; i != argc; i++){
 		string ip = argv[i];
 		ip_list.push_back(ip);
 	}
+	int len = ip_list.size();
 
 
 	// Bind server to sd and set up listen server
@@ -97,8 +102,8 @@ int main(int argc, char* argv[])
 				while(1){
 
 					//recv the DNS request
-					char buf[1000] = "";
-					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
+					Question query;
+					int bytesRecvd = recv(fds[i], &query, sizeof(query), 0);
 					if(bytesRecvd < 0)
 					{
 						cout << "Error recving request" << endl;
@@ -112,19 +117,22 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout << "recv DNS request from proxy:\n" << buf << endl;
+						cout << "recv DNS request from proxy: " << bytesRecvd << endl;
 					}
-
-
+					string hostname = query.body.QNAME;
+					response res(1, hostname, ip_list[index%len]);
+					cout<<res.hostname<<endl;
+					Response res_data = res.data_send();
+					index++;
 
 					//send back the response
-					int bytesSend = send(fds[i], &buf, 1000, 0);
+					int bytesSend = send(fds[i], &res_data, sizeof(res_data), 0);
 					if(bytesSend <= 0){
 						cout << "Error sending DNS response to proxy" << endl;
 						exit(1);
 					}
 					else{
-						cout << "Send DNS response to proxy:\n" << << endl;
+						cout << "Send DNS response to proxy:\n" << bytesSend << endl;
 					}
 
 				}
