@@ -11,15 +11,24 @@
 #include <algorithm>
 #include <cassert>
 
+using namespace std;
+
 int main(int argc, char* argv[])
 {
 	if(argc != 2)
 	{
-		std::cout << "Error: Usage is ./server <listen_port>\n";
+		cout << "Error: Usage is ./nameserver <listen_port> <ip address 1> <ip address 2> <ip address 3>...\n";
 		return 1;
 	}
 
+	//Usage is ./nameserver <listen_port> <ip address 1> <ip address 2> <ip address 3>...
 	int portNum = atoi(argv[1]);
+	vector<string> ip_lidt;
+	for(int i = 1; i != argc; i++){
+		string ip = argv[i];
+		ip_list.push_back(ip);
+	}
+
 
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -27,24 +36,24 @@ int main(int argc, char* argv[])
 	self.sin_family = AF_INET;
 	self.sin_addr.s_addr = INADDR_ANY;
 	self.sin_port = htons((u_short) portNum);
-	int err = bind(sd, (struct sockaddr*) &self, sizeof(self));
+	int err = ::bind(sd, (struct sockaddr*) &self, sizeof(self));
 	if(err == -1)
 	{
-		std::cout << "Error binding the socket to the port number\n";
+		cout << "Error binding the socket to the port number\n";
 		return 1;
 	}
 
 	err = listen(sd, 10);
 	if(err == -1)
 	{
-		std::cout << "Error setting up listen queue\n";
+		cout << "Error setting up listen queue\n";
 		return 1;
 	}
 
 	// Set of file descriptors to listen to
 	fd_set readSet;
 	// Keep track of each file descriptor accepted
-	std::vector<int> fds;
+	vector<int> fds;
 
 	while(true)
 	{
@@ -60,9 +69,9 @@ int main(int argc, char* argv[])
 		int maxfd = 0;
 		if(fds.size() > 0)
 		{
-			maxfd = *std::max_element(fds.begin(), fds.end());
+			maxfd = *max_element(fds.begin(), fds.end());
 		}
-		maxfd = std::max(maxfd, sd);
+		maxfd = max(maxfd, sd);
 
 		// maxfd + 1 is important
 		int err = select(maxfd + 1, &readSet, NULL, NULL, NULL);
@@ -73,7 +82,7 @@ int main(int argc, char* argv[])
 			int clientsd = accept(sd, NULL, NULL);
 			if(clientsd == -1)
 			{
-				std::cout << "Error on accept" << std::endl;
+				cout << "Error on accept" << endl;
 			}
 			else
 			{
@@ -86,23 +95,38 @@ int main(int argc, char* argv[])
 			if(FD_ISSET(fds[i], &readSet))
 			{
 				while(1){
+
+					//recv the DNS request
 					char buf[1000] = "";
 					int bytesRecvd = recv(fds[i], &buf, 1000, 0);
 					if(bytesRecvd < 0)
 					{
-						std::cout << "Error recving bytes" << std::endl;
-						std::cout << strerror(errno) << std::endl;
+						cout << "Error recving request" << endl;
+						cout << strerror(errno) << endl;
 						exit(1);
 					}
 					else if(bytesRecvd == 0)
 					{
-						std::cout << "Connection closed" << std::endl;
+						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
 						break;
 					}
 					else{
-						std::cout<<buf<<std::endl;
+						cout << "recv DNS request from proxy:\n" << buf << endl;
 					}
+
+
+
+					//send back the response
+					int bytesSend = send(fds[i], &buf, 1000, 0);
+					if(bytesSend <= 0){
+						cout << "Error sending DNS response to proxy" << endl;
+						exit(1);
+					}
+					else{
+						cout << "Send DNS response to proxy:\n" << << endl;
+					}
+
 				}
 			}
 		}
