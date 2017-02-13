@@ -18,8 +18,7 @@
 #include <signal.h>
 #include "DNSHeader.h"
 #include "DNSQuestion.h"
-#include "DNSRecord.h"
-#include "DNSResolve.h"
+#include "DNSRecord.h"	
 
 using namespace std;
 
@@ -131,43 +130,26 @@ vector<int> getBitrate(){
 
 
 
-int dns_usage = 0;
+
 
 int main(int argc, char* argv[])
 {
+	if(argc != 6)
+	{
+		cout << "Error: Usage is ./server <log> <alpha> <listen_port> <server_ip> <server_port>\n";
+		return 1;
+	}
 	char *log_path = argv[1];
 	float alpha = atoi(argv[2]);
 	string log_name = log_path;
 	log_name = log_name+"log.txt";
-	cout<<log_name<<endl;
 	int portNum = atoi(argv[3]);
+	char *ipserver = argv[4];
+	int portNumServer = atoi(argv[5]);
 	vector<int> get_bitrate;
 	ofstream logfile;
 	logfile.open(log_name);
-	char *ipserver;
-	int portNumServer;
-	char *DNSip;
-	int DNSportNum;
 
-	if(argc == 6)
-	{
-		//use www-ip address
-		ipserver = argv[6];
-		portNumServer = 80;
-		dns_usage = 0;
-	}
-	else if(argc == 5)
-	{
-		//use dns server
-		DNSip = argv[4];
-		DNSportNum = atoi(argv[5]);
-		dns_usage = 1;
-	}
-	else
-	{
-		cout << "Error: Usage is ./imProxy <log> <alpha> <listen_port> <dns_ip> <dns_port> <www-ip>\n";
-		return 1;
-	}
 
 	// Bind server to sd and set up listen server
 	int sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -190,63 +172,6 @@ int main(int argc, char* argv[])
 	}
 
 
-	// socket connect to dns
-	if(dns_usage == 1){
-		cout << "dns_usage = true" << endl;
-		int dnssd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-		if(dnssd == -1)
-		{
-			std::cout << "Error creating dns server socket\n";
-			exit(1);
-		}
-
-		struct sockaddr_in dns;
-		memset(&dns, 0, sizeof(dns));
-		dns.sin_family = AF_INET;
-		dns.sin_port = htons((u_short) DNSportNum);
-		struct hostent* sp = gethostbyname(DNSip);
-		memcpy(&dns.sin_addr, sp->h_addr, sp->h_length);
-		int err = connect(dnssd, (sockaddr*) &dns , sizeof(dns));
-		if(err == -1)
-		{
-			cout << "Error on connect\n";
-			exit(1);
-		}
-
-		while(1){
-			construct con(1, "video.cse.umich.edu");
-			Question query = con.data_send();
-			int bytesSent = send(dnssd, &query, sizeof(query), 0);
-			if(bytesSent <= 0)
-			{
-				cout << "Error sending stuff to server" << endl;
-			}
-			cout << "Send to server: " << bytesSent << endl;
-
-			Response resp;
-			int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
-			if(bytesRecv > 0)
-			{
-				cout << "Received from client: " << bytesRecv << endl;
-			}
-			else
-			{
-				exit(1);
-			}
-
-			if(resp.head.RCODE == '3'){
-				cout<<"can not found hostname"<<endl;
-				exit(1);
-			}
-			else{
-				cout<<resp.body.RDATA<<endl;
-				ipserver = resp.body.RDATA;
-				portNumServer = 80;
-				break;
-			}
-		}
-	}
-
 	// socket connect to server
 	int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if(serversd == -1)
@@ -266,6 +191,8 @@ int main(int argc, char* argv[])
 		std::cout << "Error on connect to web server\n";
 		exit(1);
 	}
+
+
 	// Set of file descriptors to listen to
 	fd_set readSet;
 	// Keep track of each file descriptor accepted
@@ -341,7 +268,7 @@ int main(int argc, char* argv[])
 						break;
 					}
 					else{
-						cout<< "Received from browser:\n"<<buf<<endl;
+						//cout<< "Received from browser:\n"<<buf<<endl;
 					}
 
 					Chunk find_num;
