@@ -16,9 +16,9 @@
 #include <chrono>
 #include <sys/wait.h>
 #include <signal.h>
-#include <DNSHeader.h>
-#include <DNSQuestion.h>
-#include <DNSRecord.h>
+#include "DNSHeader.h"
+#include "DNSQuestion.h"
+#include "DNSRecord.h"	
 
 using namespace std;
 
