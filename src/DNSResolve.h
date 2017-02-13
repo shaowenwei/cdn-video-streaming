@@ -22,10 +22,9 @@ public:
 	string hostname;
 	string ip;
 	ushort ID;
-	response(ushort ID, string hostname, string ip){
+	response(ushort ID, string hostname){
 		this->hostname = hostname;
 		this->ID = ID;
-		this->ip = ip;
 	}
 	Response data_send(){
         send_response();
