@@ -165,7 +165,7 @@ int main(int argc, char* argv[])
 	string log_name = log_path;
 	log_name = log_name + "DNS_log.txt";
 	ofstream logfile;
-	logfile.open(log_name);
+	logfile.open(log_name,fstream::app|fstream::out);
 
 	int portNum = atoi(argv[2]);
 	int geo = atoi(argv[3]); // 1 distance

@@ -143,7 +143,7 @@ int main(int argc, char* argv[])
 	int portNum = atoi(argv[3]);
 	vector<int> get_bitrate;
 	ofstream logfile;
-	logfile.open(log_name);
+	logfile.open(log_name,fstream::app|fstream::out);
 	char *ipserver;
 	int portNumServer;
 	char *DNSip;
