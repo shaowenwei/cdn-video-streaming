@@ -149,14 +149,14 @@ int main(int argc, char* argv[])
 	char *DNSip;
 	int DNSportNum;
 
-	if(argc == 6)
+	if(argc == 7)
 	{
 		//use www-ip address
 		ipserver = argv[6];
 		portNumServer = 80;
 		dns_usage = 0;
 	}
-	else if(argc == 5)
+	else if(argc == 6)
 	{
 		//use dns server
 		DNSip = argv[4];
@@ -165,7 +165,7 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		cout << "Error: Usage is ./imProxy <log> <alpha> <listen_port> <dns_ip> <dns_port> <www-ip>\n";
+		cout << "Error: Usage is ./miProxy <log> <alpha> <listen_port> <dns_ip> <dns_port> <www-ip>\n";
 		return 1;
 	}
 
