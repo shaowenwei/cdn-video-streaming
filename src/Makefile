@@ -13,7 +13,7 @@ miProxy: miProxy.cpp
  #	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
- 	-rm -f *.o *~ *core* miProxy #server client
+	-rm -f *.o *~ *core* miProxy #server client
 
 
 #all : nameserver client
