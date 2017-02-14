@@ -376,6 +376,7 @@ int main(int argc, char* argv[])
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
 				ipserver = fds_dns[i];
+				cout<<"ipserver: "<<ipserver<<endl;
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
 				int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
