@@ -30,7 +30,6 @@ public:
     int header_length(string s){
         size_t found = s.find("\r\n\r\n");
         string sub = s.substr(0, found+4);
-        cout<<sub<<endl;
         return (int) sub.length();
     }
     
@@ -347,6 +346,7 @@ int main(int argc, char* argv[])
 					Chunk find_num;
 					//send request to server
 					string buff = buf;
+
 					pre_seg = seg;
 					cout << "pre-Seg:" << pre_seg <<endl;
 					seg = find_num.seg_num(buff);
@@ -390,6 +390,7 @@ int main(int argc, char* argv[])
 					// check if request .f4m file change to _nolist.f4m
 					bool no_list = false;
 					string s_old = "";
+					
 					if(buff.find(".f4m") != string::npos){
 						cout<<"detect .f4m file"<<endl;
 						Modify modify;
@@ -401,6 +402,7 @@ int main(int argc, char* argv[])
 
 
 
+
 					//forward request to web server
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
 					if(bytesSent <= 0){
@@ -408,7 +410,7 @@ int main(int argc, char* argv[])
 						exit(1);
 					}
 					else{
-						//cout << "Send to web server:\n" << buff << endl;
+						cout << "Send to web server:\n" << buff << endl;
 					}
 
 
@@ -421,7 +423,7 @@ int main(int argc, char* argv[])
 					int bytesRecv = recv(serversd, &buf_r, packet_len, 0);
 					string s = "";
 					int total_bytes = 0;
-
+					
 					if(bytesRecv < 0){
 						cout << "Error receiving from web server:\n" << endl;
 						cout << "Something went wrong! errno " << errno << ": ";
@@ -430,10 +432,11 @@ int main(int argc, char* argv[])
 					}
 					else{
 						chunk += bytesRecv;
-						//cout << "Received from web server:\n" << buf_r << endl;
+						cout << "Received from web server:\n" << buf_r <<endl;
 
 						//compute length
-						s = buf_r;
+						s = buf_r;						
+
 						int header = len.header_length(s);
 						int content = len.content(s);
 						remain = content - (bytesRecv - header);
@@ -446,25 +449,29 @@ int main(int argc, char* argv[])
 
 
 					//send response to browser
-					int bytesSend = send(fds[i], buf_r, packet_len, 0);
+					int bytesSend = send(fds[i], buf_r, bytesRecv, 0);
+					//string tmp = buf_r;
+					//int bytesSend = send(fds[i], tmp.c_str(), tmp.length(), 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 						exit(1);
 					}
 					else{
 						total_bytes = total_bytes + bytesSend;
-						//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
-						cout << "Send back to browser: "<<endl;
+						cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+						//cout << "Send back to browser: "<<endl;
 					}
 
 
 
 
 
-					while(remain > 0){
+					while(remain != 0){
 
 						//recv response from webserver(body part)
-						bytesRecv = recv(serversd, &buf_r, packet_len, 0);
+						char buf_l[packet_len] = "";
+ 
+						bytesRecv = recv(serversd, &buf_l, packet_len, 0);
 						if(bytesRecv < 0){
 							cout << "Error receiving from web server:\n" << endl;
 							cout << "Something went wrong! errno " << errno << ": ";
@@ -473,21 +480,21 @@ int main(int argc, char* argv[])
 						}
 						else{
 							chunk += bytesRecv;
-							s = buf_r;
 							remain = remain - bytesRecv;
-							// cout << "byte receive: " << bytesRecv << endl;
-							// cout << "remain: " << remain << endl;
-							// cout << "Received from web server:\n" << buf_r << endl;
+							cout << "byte receive: " << bytesRecv << endl;
+							cout << "remain: " << remain << endl;
+							//cout << "Received from web server:\n" << buf_l << endl;
 
 							//send response to browser
-							bytesSend = send(fds[i], buf_r, packet_len, 0);
+							bytesSend = send(fds[i], buf_l, bytesRecv, 0);
 							if(bytesSend <= 0){
 								cout << "Error sending to browser" << endl;
 								exit(1);
 							}
 							else{
 								total_bytes = total_bytes + bytesSend;
-								//cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+								cout << "Send back to browser: " << total_bytes << " bytes" << endl;
+								//cout << "Send back to browser: "<<endl;
 							}
 						}
 					}
