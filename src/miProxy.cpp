@@ -127,6 +127,40 @@ vector<int> getBitrate(){
     return res;
 }
 
+//get web server ip address 
+char* DNSGet(int dnssd){
+	char* ipserver;
+	construct con(1, "video.cse.umich.edu");
+	Question query = con.data_send();
+	int bytesSent = send(dnssd, &query, sizeof(query), 0);
+	if(bytesSent <= 0)
+	{
+		cout << "Error sending stuff to server" << endl;
+	}
+	cout << "Send to server: " << bytesSent << endl;
+	
+	Response resp;
+	int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
+	if(bytesRecv > 0)
+	{
+		cout << "Received from client: " << bytesRecv << endl;
+	}
+	else
+	{
+		exit(1);
+	}
+	if(resp.head.RCODE == '3'){
+		cout<<"can not found hostname"<<endl;
+		exit(1);
+	}
+	else{
+		cout<<resp.body.RDATA<<endl;
+		ipserver = resp.body.RDATA;
+		//portNumServer = 80;
+	}
+	return ipserver;
+}
+
 
 
 
@@ -144,7 +178,7 @@ int main(int argc, char* argv[])
 	ofstream logfile;
 	logfile.open(log_name,fstream::app|fstream::out);
 	char *ipserver;
-	int portNumServer;
+	int portNumServer = 80;
 	char *DNSip;
 	int DNSportNum;
 
@@ -188,11 +222,11 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-
+	int dnssd;
 	// socket connect to dns
 	if(dns_usage == 1){
 		cout << "dns_usage = true" << endl;
-		int dnssd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+		dnssd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 		if(dnssd == -1)
 		{
 			std::cout << "Error creating dns server socket\n";
@@ -211,64 +245,70 @@ int main(int argc, char* argv[])
 			cout << "Error on connect\n";
 			exit(1);
 		}
-
-		while(1){
-			construct con(1, "video.cse.umich.edu");
-			Question query = con.data_send();
-			int bytesSent = send(dnssd, &query, sizeof(query), 0);
-			if(bytesSent <= 0)
-			{
-				cout << "Error sending stuff to server" << endl;
-			}
-			cout << "Send to server: " << bytesSent << endl;
-
-			Response resp;
-			int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
-			if(bytesRecv > 0)
-			{
-				cout << "Received from client: " << bytesRecv << endl;
-			}
-			else
-			{
-				exit(1);
-			}
-
-			if(resp.head.RCODE == '3'){
-				cout<<"can not found hostname"<<endl;
-				exit(1);
-			}
-			else{
-				cout<<resp.body.RDATA<<endl;
-				ipserver = resp.body.RDATA;
-				portNumServer = 80;
-				break;
-			}
-		}
 	}
+
+		//send to dns server
+		// while(1){
+		// 	construct con(1, "video.cse.umich.edu");
+		// 	Question query = con.data_send();
+		// 	int bytesSent = send(dnssd, &query, sizeof(query), 0);
+		// 	if(bytesSent <= 0)
+		// 	{
+		// 		cout << "Error sending stuff to server" << endl;
+		// 	}
+		// 	cout << "Send to server: " << bytesSent << endl;
+
+		// 	Response resp;
+		// 	int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
+		// 	if(bytesRecv > 0)
+		// 	{
+		// 		cout << "Received from client: " << bytesRecv << endl;
+		// 	}
+		// 	else
+		// 	{
+		// 		exit(1);
+		// 	}
+
+		// 	if(resp.head.RCODE == '3'){
+		// 		cout<<"can not found hostname"<<endl;
+		// 		exit(1);
+		// 	}
+		// 	else{
+		// 		cout<<resp.body.RDATA<<endl;
+		// 		ipserver = resp.body.RDATA;
+		// 		portNumServer = 80;
+		// 		break;
+		// 	}
+		// }
+	//}
 
 	// socket connect to server
-	int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if(serversd == -1)
-	{
-		std::cout << "Error creating server socket\n";
-		exit(1);
-	}
+	// int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	// if(serversd == -1)
+	// {
+	// 	std::cout << "Error creating server socket\n";
+	// 	exit(1);
+	// }
 
-	struct sockaddr_in server;
-	memset(&server, 0, sizeof(server));
-	server.sin_family = AF_INET;
-	server.sin_port = htons((u_short) portNumServer);
-	server.sin_addr.s_addr = inet_addr(ipserver);
-	int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
-	if(err1 == -1)
-	{
-		std::cout << "Error on connect to web server\n";
-		exit(1);
-	}
+	// struct sockaddr_in server;
+	// memset(&server, 0, sizeof(server));
+	// server.sin_family = AF_INET;
+	// server.sin_port = htons((u_short) portNumServer);
+	// server.sin_addr.s_addr = inet_addr(ipserver);
+	// int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
+	// if(err1 == -1)
+	// {
+	// 	cout << "Error on connect to web server\n";
+	// 	exit(1);
+	// }
+
+
+
 	// Set of file descriptors to listen to
 	fd_set readSet;
 	// Keep track of each file descriptor accepted
 	vector<int> fds;
+	vector<char*> fds_dns;
 
 	chrono::time_point<chrono::system_clock> start, end; 
 	chrono::duration<double> elapsed_seconds;
@@ -312,18 +352,43 @@ int main(int argc, char* argv[])
 			}
 			else
 			{
+				// get web server ip address for each connection
+				char* dns_server_ip = DNSGet(dnssd);
+				fds_dns.push_back(dns_server_ip);
 				fds.push_back(clientsd);
 			}
 		}
-
 
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			if(FD_ISSET(fds[i], &readSet))
 			{
+				
+				// connect to web server according to ip which dns gave
+				int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+				if(serversd == -1)
+				{
+					std::cout << "Error creating server socket\n";
+					exit(1);
+				}
+				struct sockaddr_in server;
+				memset(&server, 0, sizeof(server));
+				server.sin_family = AF_INET;
+				server.sin_port = htons((u_short) portNumServer);
+				ipserver = fds_dns[i];
+
+				server.sin_addr.s_addr = inet_addr(ipserver);
+				int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
+				if(err1 == -1)
+				{
+					cout << "Error on connect to web server\n";
+					exit(1);
+				}
+
+
+
 				while(1){
 					char buf[packet_len] = "";
-
 
 
 					//recv request from browser
@@ -337,6 +402,8 @@ int main(int argc, char* argv[])
 					{
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
+						fds_dns.erase(fds_dns.begin() + i);
+						close(serversd);
 						break;
 					}
 					else{
@@ -344,8 +411,6 @@ int main(int argc, char* argv[])
 					}
 
 					Chunk find_num;
-
-
 
 
 

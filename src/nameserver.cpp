@@ -271,6 +271,7 @@ int main(int argc, char* argv[])
 					{
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
+						fds_ip.erase(fds_ip.begin() + i);
 						break;
 					}
 					else{
