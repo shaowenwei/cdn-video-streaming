@@ -32453,3 +32453,7 @@
 127.0.0.1 video.cse.umich.edu 10.0.0.3 
 127.0.0.1 video.cse.umich.edu 10.0.0.4 
 127.0.0.1 video.cse.umich.edu 10.0.0.3 
+127.0.0.1 video.cse.umich.edu 127.0.1.1 
+127.0.0.1 video.cse.umich.edu 127.0.1.1 
+10.0.0.5 video.cse.umich.edu 10.0.0.2 
+10.0.0.5 video.cse.umich.edu 10.0.0.1 

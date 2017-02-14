@@ -60,7 +60,7 @@ int Graph::shortestPath(int src, vector<int> servers) // Prints shortest paths f
         }
     }
     
-    for (int i = 0; i != servers.size(); ++i)
+    for (int i = 0; i != (int)servers.size(); ++i)
     {
         int des = servers[i];
         path.push(make_pair(dist[des], des));

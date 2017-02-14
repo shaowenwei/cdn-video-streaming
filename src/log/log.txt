@@ -1,0 +1,62 @@
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 XJhdGUAQOdwAAAAAAAADWF1ZGlvY2hhbm5lbHMAQAAAAAAAAAAACXRyYWNraW5mbwoAAAACAwAGbGVuZ3RoAEGJmJzAAAAAAAl0aW1lc2NhbGUAQPX5AAAAAAAACGxhbmd1YWdlAgADdW5kAAAJAwAGbGVuZ3RoAEF7TkAAAAAAAAl0aW1lc2NhbGUAQOdwAAAAAAAACGxhbmd1YWdlAgADZW5nAAAJAAAJ
+		</metadata>
+	</media>
+</manifest>
+ABkAAAAG+AAAAAAAGzUYAAAPoAAABygAAAAAABvwFAAAB9AAAAcsAAAAAAAb+GgAAA+gAAAHNAAAAAAAHBeoAAAZAAAABzgAAAAAABwwqAAAD6AAAAeEAAAAAAAdWYgAAAyAAAAHiAAAAAAAHWYIAAAPoAAAB5gAAAAAAB2kiAAACWAAAAecAAAAAAAdregAAA+gAAAHqAAAAAAAHdzIAAAMgAAAB6wAAAAAAB3p0AAAD6AAAAe4AAAAAAAeGLAAAA4QAAAHvAAAAAAAHibAAAAPoAAACRAAAAAAACNW4AAAHbAAAAkUAAAAAAAjdJAAAA+gAAAJUAAAAAAAJF7wAAAJYAAAAAAAAAAAAAAAAAAAAAAA=
+	</bootstrapInfo>
+	<media
+		 streamId="1000"
+		 url="1000"
+		 bootstrapInfoId="bootstrap5948"
+	>
+		<metadata>
+			AgAKb25NZXRhRGF0YQgAAAAAAAhkdXJhdGlvbgBAgqQCuwz4fgAFd2lkdGgAQIqwAAAAAAAABmhlaWdodABAfgAAAAAAAAAMdmlkZW9jb2RlY2lkAgAEYXZjM% Seg1-Frag1
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 HiÜ”1`æó.•bÞKäÁ®¾8îÅƒWS5ï(¦R	B‡H×®½k•+éûe#Ã‘@ÊH[£á Seg1-Frag2
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 áÙŠ¤IÔÐ#2wž]Rì¨iÁí”!”û¡'eLq?’¢ªR??éu»p#t{}…£Ú‚Æðâoz$s Seg1-Frag3
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 ‰é%¨æä½é.YæVB*„Ú Seg1-Frag4
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 ˜	oÃLÓ|zNzMh!Q°È”4&ŠÇ(îóBó\f®Éóôy$1Ú¢ºí?@v\ Seg1-Frag5
+ 1.48703e+09 1.46654e-06 1.46654e-06 9.77696e-07 œ3ä£¢wóß·«€¤ÚMC	Œn4†`1Q¾JÜ¬G3J°ˆ#'ù²×œ1”%¬$ÞÇ¦I)yzé	í™åëõšiƒqñÿ8˜^ó*+¨ÙÕçÁ¯ÌÜ	$¦]¯ž*0Þ@íâë×enÅÆÇ­WÐÞÊÊ{Õ'Ukc¦½Â$Rg5 Seg1-Frag6
+ 2.26871 4600.79 4600.79 1000 M;¡²±òÁp£ú0 Seg2-Frag7
+ 2.26871 4600.79 4600.79 1000 ¸ž½:F£`>UÓ5lµÆ/òûÜ @KB¥3ÍßÕûõB"AÕPnÍÙCêÒÄXç
+£(q‹æqBXÖºßß¦Ä!KËqÏ¦_kÙÎvZp  Seg2-Frag8
+ 2.26871 4600.79 4600.79 1000 R ƒÓäòŠÙŒ×sHn¶É®ÃaaOÚ}Ñ#‰ÞJ:3GT7½ZHÎvö³ìgËV2•”£ÈÍ¸j6€£3þídýìý‘‹»GfE®+_ñ*b×OÄÀ|\ÚfÂ§µŒpKCÆg`Ž«/ñŽ?½¨À÷î@ÜM‡óIÌLdAzO¦%úµóU+!g€ðÓžD]Nžq“-¾“ìÆx™ú—P“C¡ª&àÙ¶^2ºÝc~±äòzÆÇ4lúLaä´ÂìO, Seg2-Frag9
+ 2.26871 4600.79 4600.79 1000 ´@yÖÉ˜¨úPÉ¾B`/îÿ,;Ë‰°3ÝBŠ¡§C+2G?7U­Ce^ê5¡s5žÝ˜F5ašát†DÑy›Ð	låC#qðÎ<~ØŠÒRÝÚ¦v134f
+«ÌòóYÙsƒiÐ‰­§=Éj…Þg);?Zå&…D‚c)@gÛÖçÇíõÎr„Ð†Z$–¼pß$S„àá¥IÍ§lb…»ã¤Ënh\óos{ÃLŽ¾Ã2|÷B¥Øtó…ùç¿cŒçzž}ë±+Ê²gìþ}Ñm2À¡˜è+=MÂñÁ¸Æ"p ˜©È½tÓg•cxDÖrß·íT¦9=Zö[Ù,Ðd0A—Z®0C  Seg2-Frag10
+ 2.26871 4600.79 4600.79 1000 ŒÊ«ÉRì¿Ñš	ž¾’eMc€ Seg2-Frag11
+ 2.26871 4600.79 4600.79 1000 4qQ
+¼Ú³€ª¾ÒºÌwù ŒbõG!kºr¸ Seg2-Frag12
+ 2.12354 9807.39 9807.39 1000 ü¹
+®ÿÐýB+Z#…«²'l§äüÏçòZ5Y`ÊôóºV§OÓÖ¿Øâ&pD‚	:Æ\ð’Ù"	±Ë7Åc²ŽÛtÁ 1$	KŽv±Q.ŸX&0@4·ÑæáíÂ´Jä5ÏW¯LVöbðéíÍEÂæ37Z|žœMÎ±áÃ,×Æëz@ãi®xÍªR¢¾8ºÜÏ(¤!8Üˆ“S×"
+Br\Œ!”ŒŸÌŽ‹ðC‰´Í. Seg3-Frag13
+ 2.12354 9807.39 9807.39 1000 *KLìVœÔaŽhGÓ’`y„ÊKìà Seg3-Frag14
+ 2.12354 9807.39 9807.39 1000 h"Æ°±}²Û²Ó Seg3-Frag15
+ 2.12354 9807.39 9807.39 1000 çAŒèˆêHS<bÛ5Ç³:qãÚ)u·=8Áhn®ÁŸ›âvÊÅP7µkÒƒ=æ—JŸõ×~I“êþ¯ åq.#ü×m˜N’ÛåVâÐ[æÉÀ Seg3-Frag16
+ 2.12354 9807.39 9807.39 1000 L\úexZa$Þ5‹o}5çÁÊÍ¬À¹¿¶sÈ&v~DùC8?<À Seg3-Frag17
+ 2.12354 9807.39 9807.39 1000 M“8‚Æ#ºŠõÀ—9¶ÄÎï`‰;CN„²/É"ÎÊ-¥”+©ÌP’LBl|E©%"UƒN@ýÒ:êkÀIˆz|†©	íþh¡MÐfêª™5Pq_’Å±8Àæÿ¦ü×‚¥w:M}@™°ü
+.œO3ùcOü/ÄÆzppÒ3J9%ÖA+“åIÇs¢hzŽ…Ã^§jò-Š’‰7fb9˜!*dÊŽï:h Seg3-Frag18
+ 4.51766 5993.31 5993.31 1000 Xvm.m	• Seg4-Frag19
+ 4.51766 5993.31 5993.31 1000 ¯|²>8Dñ8Ë‹hÔ6ÔHk\JÆ?PkŽ`7ÁtÈ‡ìà§WÆÕûÐL=W­´÷øŽ3lG*‰/º¾``„õÏ‚›ÛI/núœ+P/ƒ[”Uã"ión¯©$y*ÞiÐ%ñ¸ Seg4-Frag20
+ 4.51766 5993.31 5993.31 1000 ·Œ©S+ú4¤w®Øègé+ôeûŠò/½Vl|öÅí_ûRýØ’KÞLýŸÌ‘±†ëoÃ¹|ûUÆ+?*S¾û¾Œû¶‹¦jñÿówÛë'N‚çD"Ìÿßë4X¥šÒ0ÒŸ[ð‚šŽSÈ¥áƒ/>å&¡àš÷%U#¬)Ñßjžz™›"Êå™÷üˆ>Ëoòy•7º¿Ð1a 7¤Ú;)M¤ó<PLAŽ.7<CãáMO'˜Rð7®j.×Éþ¡UûJ}>f»O¸™™ »ÌÔC$—Oø"àŽI<ðÖSçõo•Tišg(•\0£¡±Y§}xº‚Tœ†wžw£\á=N Seg4-Frag21
+ 4.51766 5993.31 5993.31 1000 ^ŠûÑ‘EêèuB…cftá$ÌéÖVÍ†«f´$à Seg4-Frag22
+ 4.51766 5993.31 5993.31 1000 \H·yre\Ü Seg4-Frag23
+ 4.51766 5993.31 5993.31 1000 bòøÒÝO?Å œD¢èéÏÚw§ËYÇ§ƒ-xÐ^$s‚îõ±4mWf¹Û¤•»eCAÿÓyçJWçÜ¤UòP‚çÃkÖêEš×IN:ÑpZI[Óê¿0ô?ŠZ^ûd4S3Ö¦ŒÕ}ÞÉ!÷É5I™ó”À¦Þý(S¢Yû9à•“ÕÍ‰ê)K´¡u²#rðôŽ Seg4-Frag24
+ 4.67921 7321.9 7321.9 1000 `€ Seg5-Frag25
+ 4.67921 7321.9 7321.9 1000 À'óÏ«ž.¿Z Seg5-Frag26
+ 4.67921 7321.9 7321.9 1000 Q±,9
+	ÈPˆ€íû¹3á©½éFˆpKBòL%b“$÷­/IsÄÓž^D)å„hºÈ¡‘.Lv‹0ns„+:È
+~n°|yý™Ab›­L>í¦õ¥1µU*´È`be¯ðm÷Tx†œ£¶;x%8”3²OT@`ûK¸k˜'SzJ|=)bÕp¼óØµå{4m¼‚èB°a\†žÜë=í^öUd§
+‹UËmÌÔÂãGËugZŽàŽê5ë*ºU?eCeïÒ‹tö•Hà Seg5-Frag27
+ 4.67921 7321.9 7321.9 1000 -9Ž>›e·ßcÜ¶Æà†s»Š
+7ux‰ºe=
+À°!¯ôê¼Y%&U’ÁÞø°¸‰©¤åLur¼æ‘Õ¡`>x Seg5-Frag28
+ 4.67921 7321.9 7321.9 1000 n;Ùw5öã‹îø•¤½îÀs±†)~­¸»Y³à;Íö‡–VÍ1ŒûÛÒ'R£—°#T QÏ«nå„(3üéb8àpÝ§ë[„ãZÐ)(ç®‰iU3@,M=†ofãš­>9·‘ÎúŠ¤aì4(N²8!-4š¬EX_4¡“˜4¦¯¦•ºcÛ‘Ëd©à+)b¥_MÕ·]OZ>¿‡NljäƒKÄKŸf²BT‹+Míð&å6é™ºUÄêýÝ: Seg5-Frag29
+ 4.67921 7321.9 7321.9 1000 ,‚€`¶"-HÁR‚0ëSSwà£¡Á8h^Þ½`*+ÈänŠYŒo’GÐZ?Üµ[tÚ‘ÚÇßæmÝìà	q³›7{å¥Ýæï!µºvâÇ»šî%ðoÍÎ½ËÄà$,j­‘l+Üf1öñéŒXJ$_ÁÞY÷ÏL‘‘:«‡D‘‰‹¬ïÁ´jåT›øJ°U” Seg5-Frag30
+ 6.63933 6616.2 6616.2 1000 ¯ó•—¦”GŽT^y\ã2]æÁ’xJNc8âßÔÏ©îÖ\akãƒê¡†8¤j†äNqàw¯ÕH² Seg6-Frag31
+ 6.63933 6616.2 6616.2 1000 KÆ·¢ËÜ Seg6-Frag32
+ 6.63933 6616.2 6616.2 1000 @ g5Þ”—Øêw„g c:¨¯¯Õ^#r¶ª±¡/ôî?
+ÐL” ¹o¢r~è®¡ãÏ•qïÎ‡Ì;dãû‘k1¬é’-ÝÊ"ƒU
+Ä‰‘r)
+“Â°@(	‚ºL·K‚€u•ð½Þ˜‘ò¾r~¿ûO×Þblyøô÷¨¢71ÜE×t <Æô‚ P;ÓûüC˜ÿåMÒ¸1L±¥­T6‡¦pAe–ÿè ÌÕÕNŠ¸ÝK×vÈÃ1øR&h„¨„uc,LÈŠWŽxödp5þ½Ì%MADî, Seg6-Frag33
+ 6.63933 6616.2 6616.2 1000 ¥ÛAd‰<™S[)è¶B„ 'sà Seg6-Frag34
+ 6.63933 6616.2 6616.2 1000 ÞûmÁò½'î Seg6-Frag35
+ 6.63933 6616.2 6616.2 1000 c•€‡ãÓ5"¢æbUì&'^ñØ¦…¯‡YO*ÿ^Oeêc+äg°3ÇÑÐÒžñ“4è'j¯Â¯Â;¬ê!c"K(eÕ1ÜÝ˜ µ±ì06B	BˆŽ®-Fâ/\ŒÔÉq¥é¢ªó2ô[”‡vÏ¢•ž;Å‰ÛÓ½œæQäb©uõš Seg6-Frag36

@@ -55,9 +55,8 @@ void readfile::read_network_config(string filename){
             }
             if(line > 1 && line < num_nodes + 2){
                 char space = ' ';
-                int s1 = 0;
                 int num_space = 0;
-                for(int i = 0; i != output.size(); i++)
+                for(int i = 0; i != (int)output.size(); i++)
                 {
                     char c = output[i];
                     if(c == space){
@@ -65,7 +64,7 @@ void readfile::read_network_config(string filename){
                         if (num_space == 1)
                         {
                             n1 = atoi(output.substr(0, i).c_str());
-                            s1 = i;
+                            
                         }
                         if (num_space == 2){
                             n2 = output.substr(i-6, 6).c_str();
@@ -87,7 +86,7 @@ void readfile::read_network_config(string filename){
                 int num_space = 0;
                 int s1 = 0;
                 nn1.clear();
-                for(int i = 0; i < output.size(); i++)
+                for(int i = 0; i < (int)output.size(); i++)
                 {
                     
                     char c = output[i];
@@ -119,29 +118,25 @@ string distance(string client_ip, string filename){
     int V = read.num_nodes;
     Graph g(V);
     int client = -1;
-    
     vector<vector<int>> vec = read.LINKS;
-    for(int i = 0; i != vec.size(); i++)
+    for(int i = 0; i != (int)vec.size(); i++)
     {
         g.addEdge(vec[i][0], vec[i][1], vec[i][2]);
     }
-    
     vector<int> servers;
     vector< pair<int, string> > tmp = read.SERVER;
-    for(int i = 0; i != tmp.size(); i++){
+    for(int i = 0; i != (int)tmp.size(); i++){
         servers.push_back(tmp[i].first);
     }
-    
     vector< pair<int, string> > tm = read.CLIENT;
-    for(int i = 0; i != tm.size(); i++){
+    for(int i = 0; i != (int)tm.size(); i++){
         if(tm[i].second == client_ip){
             client = tm[i].first;
         }
     }
-    
     int s = g.shortestPath(client, servers);
     string ip = "";
-    for(int i = 0; i != tmp.size(); i++){
+    for(int i = 0; i != (int)tmp.size(); i++){
         if(tmp[i].first == s){
             ip = tmp[i].second;
         }
@@ -183,7 +178,7 @@ int main(int argc, char* argv[])
 		read.read_network_config(server_filename);
 		vector< pair<int, string> > server_list = read.SERVER;
 		index = 0;
-		for(int i = 0; i != server_list.size(); ++i){
+		for(int i = 0; i != (int)server_list.size(); ++i){
 			string ip = server_list[i].second;
 			ip_list.push_back(ip);
 		}
@@ -282,8 +277,10 @@ int main(int argc, char* argv[])
 						cout << "recv DNS request from proxy: " << bytesRecvd << endl;
 					}
 					string hostname = query.body.QNAME;
+					//cout << "hostname: " <<hostname<< endl;
 
 					response res(1, hostname);
+					
 					if(geo == 0)
 					{
 						res.ip = ip_list[index%len];
@@ -293,8 +290,11 @@ int main(int argc, char* argv[])
 					}
 					else
 					{
-    					string sip = distance(fds_ip[i], server_filename);
-    					res.ip = sip;
+    						cout<<fds_ip[i]<<endl;
+						cout<<server_filename<<endl;
+						string sip = distance(fds_ip[i], server_filename);
+						cout<<"sip:"<<sip<<endl;
+    						res.ip = sip;
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << sip << " " <<endl;
 					}
