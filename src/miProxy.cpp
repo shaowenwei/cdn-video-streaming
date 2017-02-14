@@ -344,6 +344,11 @@ int main(int argc, char* argv[])
 					}
 
 					Chunk find_num;
+
+
+
+
+
 					//send request to server
 					string buff = buf;
 
@@ -450,8 +455,6 @@ int main(int argc, char* argv[])
 
 					//send response to browser
 					int bytesSend = send(fds[i], buf_r, bytesRecv, 0);
-					//string tmp = buf_r;
-					//int bytesSend = send(fds[i], tmp.c_str(), tmp.length(), 0);
 					if(bytesSend <= 0){
 						cout << "Error sending to browser" << endl;
 						exit(1);

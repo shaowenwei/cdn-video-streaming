@@ -290,7 +290,7 @@ int main(int argc, char* argv[])
 					}
 					else
 					{
-    						cout<<fds_ip[i]<<endl;
+    					cout<<fds_ip[i]<<endl;
 						cout<<server_filename<<endl;
 						string sip = distance(fds_ip[i], server_filename);
 						cout<<"sip:"<<sip<<endl;

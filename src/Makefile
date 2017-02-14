@@ -12,16 +12,3 @@ nameserver: nameserver.cpp
 clean:
 	-rm -f *.o *~ *core* miProxy nameserver
 
-
-#all : nameserver client
-
-#nameserver: nameserver.cpp
-#	$(CC) $(CFLAGS) -o $@ $^
-
-#client: client.cpp
-#	$(CC) $(CFLAGS) -o $@ $^
-
-# clean:
-# 	-rm -f *.o *~ *core* nameserver client
-
-
