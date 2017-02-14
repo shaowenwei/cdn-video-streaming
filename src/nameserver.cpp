@@ -287,6 +287,7 @@ int main(int argc, char* argv[])
 						res.ip = ip_list[index%len];
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;
+						cout<< fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;				
 						index++;
 					}
 					else
@@ -310,7 +311,11 @@ int main(int argc, char* argv[])
 					else{
 						cout << "Send DNS response to proxy:\n" << bytesSend << endl;
 					}
-
+					
+					cout << "Connection closed" << endl;
+					fds.erase(fds.begin() + i);
+					fds_ip.erase(fds_ip.begin() + i);
+					break;
 				}
 			}
 		}

@@ -732,3 +732,3256 @@ Connection: Keep-Alive
 Content-Type: video/f4f
 
  Seg3-Frag14
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07  2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499996
+Connection: Keep-Alive
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://ns.adobe.com/f4m/1.0">
+	<id>
+		10
+	</id>
+	<streamType>
+		recorded
+	</streamType>
+	<duration>
+		596.50133333333338
+	</duration>
+	<bootstrapInfo
+		 profile="named"
+		 id="bootstrap5948"
+	>
+		AAAMg2Fic3QAAAAAAAAAjwAAAAPoAAAAAAAJGgAAAAAAAAAAAAAAAAAAAQAAA0Fhc3J0AAAAAAAAAABmAAAAAQAAAAYAAAACAAAABgAAAAMAAAAGAAAABAAAAAYAAAAFAAAABgAAAAYAAAAGAAAABwAAAAYAAAAIAAAABgAAAAkAAAAGAAAACgAAAAYAAAALAAAABgAAAAwAAAAGAAAADQAAAAYAAAAOAAAABQAAAA8AAAAGAAAAEAAAAAYAAAARAAAABgAAABIAAAAGAAAAEwAAAAYAAAAUAAAABQAAABUAAAAGAAAAFgAAAAYAAAAXAAAABgAAABgAAAAGAAAAGQAAAAYAAAAaAAAABgAAABsAAAAGAAAAHAAAAAUAAAAdAAAABgAAAB4AAAAGAAAAHwAAAAUAAAAgAAAABgAAACEAAAAGAAAAIgAAAAUAAAAjAAAABgAAACQAAAAGAAAAJQAAAAYAAAAmAAAABgAAACcAAAAFAAAAKAAAAAY% Seg1-Frag1
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499994
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg1-Frag2
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499993
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg1-Frag3
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499992
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg1-Frag4
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499991
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg1-Frag5
+ 1.4871e+09 1.46416e-06 1.46416e-06 9.76107e-07 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499990
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg1-Frag6
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499989
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag7
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499988
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag8
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499987
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag9
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499986
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag10
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499985
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag11
+ 3.58957 2906.87 2906.87 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499984
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg2-Frag12
+ 3.59503 5792.14 5792.14 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499983
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag13
+ 3.59503 5792.14 5792.14 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499982
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag14
+ 3.59503 5792.14 5792.14 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499981
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag15
+ 3.59503 5792.14 5792.14 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499980
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag16
+ 3.59503 5792.14 5792.14 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499979
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag17
+ 3.59503 5792.14 5792.14 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499978
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg3-Frag18
+ 3.44812 7851.31 7851.31 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499977
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag19
+ 3.44812 7851.31 7851.31 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499976
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag20
+ 3.44812 7851.31 7851.31 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499975
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag21
+ 3.44812 7851.31 7851.31 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499974
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag22
+ 3.44812 7851.31 7851.31 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499973
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag23
+ 3.44812 7851.31 7851.31 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499972
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg4-Frag24
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499971
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag25
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499970
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag26
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499969
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag27
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499968
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag28
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499967
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag29
+ 3.40442 10062.6 10062.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499966
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg5-Frag30
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499965
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag31
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499964
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag32
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499963
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag33
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499962
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag34
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499961
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag35
+ 6.67159 6583.69 6583.69 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499960
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg6-Frag36
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499959
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag37
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499958
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag38
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499957
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag39
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499956
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag40
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499955
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag41
+ 6.00388 8502.94 8502.94 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499954
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg7-Frag42
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499953
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag43
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499952
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag44
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499951
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag45
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499950
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag46
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499949
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag47
+ 5.87826 9577.32 9577.32 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499948
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg8-Frag48
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499947
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag49
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499946
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag50
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499945
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag51
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499944
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag52
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499943
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag53
+ 5.91959 10662 10662 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499942
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg9-Frag54
+ 6.35771 11211.8 11211.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499941
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag55
+ 6.35771 11211.8 11211.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499940
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag56
+ 6.35771 11211.8 11211.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499939
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag57
+ 6.35771 11211.8 11211.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499938
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag58
+ 6.35771 11211.8 11211.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499937
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag59
+ 6.35771 11211.8 11211.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499936
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg10-Frag60
+ 5.68594 13426.9 13426.9 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499935
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag61
+ 5.68594 13426.9 13426.9 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499934
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag62
+ 5.68594 13426.9 13426.9 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499933
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag63
+ 5.68594 13426.9 13426.9 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499932
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag64
+ 5.68594 13426.9 13426.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499931
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag65
+ 5.68594 13426.9 13426.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499930
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg11-Frag66
+ 5.59422 14737.5 14737.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499929
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag67
+ 5.59422 14737.5 14737.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499928
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag68
+ 5.59422 14737.5 14737.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499927
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag69
+ 5.59422 14737.5 14737.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499926
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag70
+ 5.59422 14737.5 14737.5 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499925
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag71
+ 5.59422 14737.5 14737.5 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499924
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg12-Frag72
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499923
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag73
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499922
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag74
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499921
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag75
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499920
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag76
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499919
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag77
+ 5.92896 14873 14873 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499918
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg13-Frag78
+ 6.41004 15470.8 15470.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499917
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg14-Frag79
+ 6.41004 15470.8 15470.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499916
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg14-Frag80
+ 6.41004 15470.8 15470.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499915
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg14-Frag81
+ 6.41004 15470.8 15470.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499914
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg14-Frag82
+ 6.41004 15470.8 15470.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499913
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg14-Frag83
+ 5.61808 18925.3 18925.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499912
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag84
+ 5.61808 18925.3 18925.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499911
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag85
+ 5.61808 18925.3 18925.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499910
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag86
+ 5.61808 18925.3 18925.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499909
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag87
+ 5.61808 18925.3 18925.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499908
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag88
+ 5.61808 18925.3 18925.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499907
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg15-Frag89
+ 5.7203 19330.1 19330.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499906
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag90
+ 5.7203 19330.1 19330.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499905
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag91
+ 5.7203 19330.1 19330.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499904
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag92
+ 5.7203 19330.1 19330.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499903
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag93
+ 5.7203 19330.1 19330.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499902
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag94
+ 5.7203 19330.1 19330.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499901
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg16-Frag95
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499900
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag96
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499899
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag97
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499898
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag98
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499897
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag99
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499896
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag100
+ 5.84153 19850.3 19850.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499895
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg17-Frag101
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499894
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag102
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499893
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag103
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499892
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag104
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499891
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag105
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499890
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag106
+ 5.8448 21010.2 21010.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499889
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg18-Frag107
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499888
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag108
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499887
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag109
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499886
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag110
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499885
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag111
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499884
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag112
+ 5.88078 22199.5 22199.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499883
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg19-Frag113
+ 5.79263 23768.8 23768.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499882
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg20-Frag114
+ 5.79263 23768.8 23768.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499881
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg20-Frag115
+ 5.79263 23768.8 23768.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499880
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg20-Frag116
+ 5.79263 23768.8 23768.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499879
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg20-Frag117
+ 5.79263 23768.8 23768.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499878
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg20-Frag118
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499877
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag119
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499876
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag120
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499875
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag121
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499874
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag122
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499873
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag123
+ 5.48192 26773.3 26773.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499872
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg21-Frag124
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499871
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag125
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499870
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag126
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499869
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag127
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499868
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag128
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499867
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag129
+ 5.75385 26832.9 26832.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499866
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg22-Frag130
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499865
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag131
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499864
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag132
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499863
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag133
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499862
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag134
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499861
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag135
+ 6.28856 25670.6 25670.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499860
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg23-Frag136
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499859
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag137
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499858
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag138
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499857
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag139
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499856
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag140
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499855
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag141
+ 6.23818 27047.9 27047.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499854
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg24-Frag142
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499853
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag143
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499852
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag144
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499851
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag145
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499850
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag146
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499849
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag147
+ 5.87675 30009.7 30009.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499848
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg25-Frag148
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499847
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag149
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499846
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag150
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499845
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag151
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499844
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag152
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499843
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag153
+ 5.55966 33124.2 33124.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499842
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg26-Frag154
+ 5.72713 33566 33566 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499841
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag155
+ 5.72713 33566 33566 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499840
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag156
+ 5.72713 33566 33566 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499839
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag157
+ 5.72713 33566 33566 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499838
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag158
+ 5.72713 33566 33566 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499837
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag159
+ 5.72713 33566 33566 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499836
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg27-Frag160
+ 5.83683 33951.9 33951.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499835
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg28-Frag161
+ 5.83683 33951.9 33951.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499834
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg28-Frag162
+ 5.83683 33951.9 33951.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499833
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg28-Frag163
+ 5.83683 33951.9 33951.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499832
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg28-Frag164
+ 5.83683 33951.9 33951.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499831
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg28-Frag165
+ 5.43623 37848.1 37848.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499830
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag166
+ 5.43623 37848.1 37848.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499829
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag167
+ 5.43623 37848.1 37848.1 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499828
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag168
+ 5.43623 37848.1 37848.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499827
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag169
+ 5.43623 37848.1 37848.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499826
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag170
+ 5.43623 37848.1 37848.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499825
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg29-Frag171
+ 5.96366 35494.6 35494.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499824
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag172
+ 5.96366 35494.6 35494.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499823
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag173
+ 5.96366 35494.6 35494.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499822
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag174
+ 5.96366 35494.6 35494.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499821
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag175
+ 5.96366 35494.6 35494.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499820
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag176
+ 5.96366 35494.6 35494.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499819
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg30-Frag177
+ 5.60208 38792.9 38792.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499818
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg31-Frag178
+ 5.60208 38792.9 38792.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499817
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg31-Frag179
+ 5.60208 38792.9 38792.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499816
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg31-Frag180
+ 5.60208 38792.9 38792.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499815
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg31-Frag181
+ 5.60208 38792.9 38792.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499814
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg31-Frag182
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499813
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag183
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499812
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag184
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499811
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag185
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499810
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag186
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499809
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag187
+ 5.48477 41140.1 41140.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499808
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg32-Frag188
+ 6.14995 38295.1 38295.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499807
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag189
+ 6.14995 38295.1 38295.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499806
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag190
+ 6.14995 38295.1 38295.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499805
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag191
+ 6.14995 38295.1 38295.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499804
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag192
+ 6.14995 38295.1 38295.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499803
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag193
+ 6.14995 38295.1 38295.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499802
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg33-Frag194
+ 5.72144 42211.8 42211.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499801
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg34-Frag195
+ 5.72144 42211.8 42211.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499800
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg34-Frag196
+ 5.72144 42211.8 42211.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499799
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg34-Frag197
+ 5.72144 42211.8 42211.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499798
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg34-Frag198
+ 5.72144 42211.8 42211.8 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499797
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg34-Frag199
+ 5.15734 48037.6 48037.6 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499796
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag200
+ 5.15734 48037.6 48037.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499795
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag201
+ 5.15734 48037.6 48037.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499794
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag202
+ 5.15734 48037.6 48037.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499793
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag203
+ 5.15734 48037.6 48037.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499792
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag204
+ 5.15734 48037.6 48037.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499791
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg35-Frag205
+ 5.72868 44309.8 44309.8 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499790
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag206
+ 5.72868 44309.8 44309.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499789
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag207
+ 5.72868 44309.8 44309.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499788
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag208
+ 5.72868 44309.8 44309.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499787
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag209
+ 5.72868 44309.8 44309.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499786
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag210
+ 5.72868 44309.8 44309.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499785
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg36-Frag211
+ 5.79299 45303.7 45303.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499784
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag212
+ 5.79299 45303.7 45303.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499783
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag213
+ 5.79299 45303.7 45303.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499782
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag214
+ 5.79299 45303.7 45303.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499781
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag215
+ 5.79299 45303.7 45303.7 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499780
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag216
+ 5.79299 45303.7 45303.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499779
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg37-Frag217
+ 6.08124 44546.3 44546.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499778
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag218
+ 6.08124 44546.3 44546.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499777
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag219
+ 6.08124 44546.3 44546.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499776
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag220
+ 6.08124 44546.3 44546.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499775
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag221
+ 6.08124 44546.3 44546.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499774
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag222
+ 6.08124 44546.3 44546.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499773
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg38-Frag223
+ 5.96199 46334.8 46334.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499772
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg39-Frag224
+ 5.96199 46334.8 46334.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499771
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg39-Frag225
+ 5.96199 46334.8 46334.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499770
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg39-Frag226
+ 5.96199 46334.8 46334.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499769
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg39-Frag227
+ 5.96199 46334.8 46334.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499768
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg39-Frag228
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499767
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag229
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499766
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag230
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499765
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag231
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499764
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag232
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499763
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag233
+ 5.48043 51854.1 51854.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499762
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg40-Frag234
+ 5.79777 50147.6 50147.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499761
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag235
+ 5.79777 50147.6 50147.6 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499760
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag236
+ 5.79777 50147.6 50147.6 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499759
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag237
+ 5.79777 50147.6 50147.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499758
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag238
+ 5.79777 50147.6 50147.6 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499757
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag239
+ 5.79777 50147.6 50147.6 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499756
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg41-Frag240
+ 5.63963 52385 52385 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499755
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag241
+ 5.63963 52385 52385 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499754
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag242
+ 5.63963 52385 52385 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499753
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag243
+ 5.63963 52385 52385 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499752
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag244
+ 5.63963 52385 52385 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499751
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag245
+ 5.63963 52385 52385 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499750
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg42-Frag246
+ 5.76514 53139.5 53139.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499749
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg43-Frag247
+ 5.76514 53139.5 53139.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499748
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg43-Frag248
+ 5.76514 53139.5 53139.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499747
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg43-Frag249
+ 5.76514 53139.5 53139.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499746
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg43-Frag250
+ 5.76514 53139.5 53139.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499745
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg43-Frag251
+ 5.38974 58272.8 58272.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499744
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag252
+ 5.38974 58272.8 58272.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499743
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag253
+ 5.38974 58272.8 58272.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499742
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag254
+ 5.38974 58272.8 58272.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499741
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag255
+ 5.38974 58272.8 58272.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499740
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag256
+ 5.38974 58272.8 58272.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499739
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg44-Frag257
+ 5.67861 56349.1 56349.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499738
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg45-Frag258
+ 5.67861 56349.1 56349.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499737
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg45-Frag259
+ 5.67861 56349.1 56349.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499736
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg45-Frag260
+ 5.67861 56349.1 56349.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499735
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg45-Frag261
+ 5.67861 56349.1 56349.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499734
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg45-Frag262
+ 5.52526 59147.5 59147.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499733
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag263
+ 5.52526 59147.5 59147.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499732
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag264
+ 5.52526 59147.5 59147.5 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499731
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag265
+ 5.52526 59147.5 59147.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499730
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag266
+ 5.52526 59147.5 59147.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499729
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag267
+ 5.52526 59147.5 59147.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499728
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg46-Frag268
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499727
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag269
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499726
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag270
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499725
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag271
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499724
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag272
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499723
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag273
+ 5.5165 60355.2 60355.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499722
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg47-Frag274
+ 6.20114 55545.6 55545.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499721
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg48-Frag275
+ 6.20114 55545.6 55545.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499720
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg48-Frag276
+ 6.20114 55545.6 55545.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499719
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg48-Frag277
+ 6.20114 55545.6 55545.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499718
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg48-Frag278
+ 6.20114 55545.6 55545.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499717
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg48-Frag279
+ 5.36756 65551.5 65551.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499716
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag280
+ 5.36756 65551.5 65551.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499715
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag281
+ 5.36756 65551.5 65551.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499714
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag282
+ 5.36756 65551.5 65551.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499713
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag283
+ 5.36756 65551.5 65551.5 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499712
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag284
+ 5.36756 65551.5 65551.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499711
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg49-Frag285
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499710
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag286
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499709
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag287
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499708
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag288
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499707
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag289
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499706
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag290
+ 5.82909 61414.5 61414.5 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499705
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg50-Frag291
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499704
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag292
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499703
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag293
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499702
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag294
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499701
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag295
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499700
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag296
+ 5.72171 63617.7 63617.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499699
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg51-Frag297
+ 5.9582 62241.1 62241.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499698
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag298
+ 5.9582 62241.1 62241.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499697
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag299
+ 5.9582 62241.1 62241.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499696
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag300
+ 5.9582 62241.1 62241.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499695
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag301
+ 5.9582 62241.1 62241.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499694
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag302
+ 5.9582 62241.1 62241.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499693
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg52-Frag303
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499692
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag304
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499691
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag305
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499690
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag306
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499689
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag307
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499688
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag308
+ 5.92067 64052.2 64052.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499687
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg53-Frag309
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499686
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag310
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499685
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag311
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499684
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag312
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499683
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag313
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499682
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag314
+ 5.92566 65704.2 65704.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499681
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg54-Frag315
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499680
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag316
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499679
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag317
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499678
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag318
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499677
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag319
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499676
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag320
+ 5.96313 66758.4 66758.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499675
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg55-Frag321
+ 6.07435 66827.6 66827.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499674
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg56-Frag322
+ 6.07435 66827.6 66827.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499673
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg56-Frag323
+ 6.07435 66827.6 66827.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499672
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg56-Frag324
+ 6.07435 66827.6 66827.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499671
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg56-Frag325
+ 6.07435 66827.6 66827.6 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499670
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg56-Frag326
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499669
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag327
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499668
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag328
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499667
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag329
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499666
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag330
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499665
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag331
+ 5.31478 77597.9 77597.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499664
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg57-Frag332
+ 5.76915 72852.1 72852.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499663
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg58-Frag333
+ 5.76915 72852.1 72852.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499662
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg58-Frag334
+ 5.76915 72852.1 72852.1 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499661
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg58-Frag335
+ 5.76915 72852.1 72852.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499660
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg58-Frag336
+ 5.76915 72852.1 72852.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499659
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg58-Frag337
+ 7.07548 60110.3 60110.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499658
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag338
+ 7.07548 60110.3 60110.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499657
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag339
+ 7.07548 60110.3 60110.3 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499656
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag340
+ 7.07548 60110.3 60110.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499655
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag341
+ 7.07548 60110.3 60110.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499654
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag342
+ 7.07548 60110.3 60110.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499653
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg59-Frag343
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499652
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag344
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499651
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag345
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499650
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag346
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499649
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag347
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499648
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag348
+ 5.64558 76526.5 76526.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499647
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg60-Frag349
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499646
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag350
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499645
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag351
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499644
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag352
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499643
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag353
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499642
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag354
+ 6.23747 70975.2 70975.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499641
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg61-Frag355
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499640
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag356
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499639
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag357
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499638
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag358
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499637
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag359
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499636
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag360
+ 3.91436 115520 115520 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499635
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg62-Frag361
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499634
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag362
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499633
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag363
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499632
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag364
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499631
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag365
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499630
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag366
+ 5.99991 77066.3 77066.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499629
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg63-Frag367
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499628
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag368
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499627
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag369
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499626
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag370
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499625
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag371
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499624
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag372
+ 5.76622 81508.8 81508.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499623
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg64-Frag373
+ 8.27175 57664.3 57664.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499622
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag374
+ 8.27175 57664.3 57664.3 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499621
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag375
+ 8.27175 57664.3 57664.3 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499620
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag376
+ 8.27175 57664.3 57664.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499619
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag377
+ 8.27175 57664.3 57664.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499618
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag378
+ 8.27175 57664.3 57664.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499617
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg65-Frag379
+ 5.47593 88020.1 88020.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499616
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag380
+ 5.47593 88020.1 88020.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499615
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag381
+ 5.47593 88020.1 88020.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499614
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag382
+ 5.47593 88020.1 88020.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499613
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag383
+ 5.47593 88020.1 88020.1 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499612
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag384
+ 5.47593 88020.1 88020.1 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499611
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg66-Frag385
+ 5.96831 81519.5 81519.5 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499610
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag386
+ 5.96831 81519.5 81519.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499609
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag387
+ 5.96831 81519.5 81519.5 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499608
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag388
+ 5.96831 81519.5 81519.5 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499607
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag389
+ 5.96831 81519.5 81519.5 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499606
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag390
+ 5.96831 81519.5 81519.5 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499605
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg67-Frag391
+ 5.88298 83540.7 83540.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499604
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag392
+ 5.88298 83540.7 83540.7 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499603
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag393
+ 5.88298 83540.7 83540.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499602
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag394
+ 5.88298 83540.7 83540.7 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499601
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag395
+ 5.88298 83540.7 83540.7 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499600
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag396
+ 5.88298 83540.7 83540.7 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499599
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg68-Frag397
+ 5.67576 87390.8 87390.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499598
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg69-Frag398
+ 5.67576 87390.8 87390.8 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499597
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg69-Frag399
+ 5.67576 87390.8 87390.8 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499596
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg69-Frag400
+ 5.67576 87390.8 87390.8 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499595
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg69-Frag401
+ 5.67576 87390.8 87390.8 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499594
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg69-Frag402
+ 5.1227 97793.4 97793.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499593
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag403
+ 5.1227 97793.4 97793.4 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499592
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag404
+ 5.1227 97793.4 97793.4 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499591
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag405
+ 5.1227 97793.4 97793.4 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499590
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag406
+ 5.1227 97793.4 97793.4 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499589
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag407
+ 5.1227 97793.4 97793.4 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499588
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg70-Frag408
+ 5.9619 85097.9 85097.9 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499587
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag409
+ 5.9619 85097.9 85097.9 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499586
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag410
+ 5.9619 85097.9 85097.9 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499585
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag411
+ 5.9619 85097.9 85097.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499584
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag412
+ 5.9619 85097.9 85097.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499583
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag413
+ 5.9619 85097.9 85097.9 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499582
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg71-Frag414
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499581
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag415
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499580
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag416
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499579
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag417
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499578
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag418
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499577
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag419
+ 5.59389 91863.3 91863.3 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499576
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg72-Frag420
+ 5.99605 86853.4 86853.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499575
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg73-Frag421
+ 5.99605 86853.4 86853.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499574
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg73-Frag422
+ 5.99605 86853.4 86853.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499573
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg73-Frag423
+ 5.99605 86853.4 86853.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499572
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg73-Frag424
+ 5.99605 86853.4 86853.4 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499571
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg73-Frag425
+ 5.67811 94207.2 94207.2 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499570
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag426
+ 5.67811 94207.2 94207.2 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499569
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag427
+ 5.67811 94207.2 94207.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499568
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag428
+ 5.67811 94207.2 94207.2 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499567
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag429
+ 5.67811 94207.2 94207.2 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499566
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag430
+ 5.67811 94207.2 94207.2 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499565
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg74-Frag431
+ 6.24515 87293.6 87293.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499564
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag432
+ 6.24515 87293.6 87293.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499563
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag433
+ 6.24515 87293.6 87293.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499562
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag434
+ 6.24515 87293.6 87293.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499561
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag435
+ 6.24515 87293.6 87293.6 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499560
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag436
+ 6.24515 87293.6 87293.6 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499559
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg75-Frag437
+ 5.87847 94395.8 94395.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499558
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag438
+ 5.87847 94395.8 94395.8 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499557
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag439
+ 5.87847 94395.8 94395.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499556
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag440
+ 5.87847 94395.8 94395.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499555
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag441
+ 5.87847 94395.8 94395.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499554
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag442
+ 5.87847 94395.8 94395.8 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499553
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg76-Frag443
+ 6.00227 93555.1 93555.1 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499552
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg77-Frag444
+ 6.00227 93555.1 93555.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499551
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg77-Frag445
+ 6.00227 93555.1 93555.1 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499550
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg77-Frag446
+ 6.00227 93555.1 93555.1 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499549
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg77-Frag447
+ 6.00227 93555.1 93555.1 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499548
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg77-Frag448
+ 5.24996 108092 108092 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499547
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag449
+ 5.24996 108092 108092 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499546
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag450
+ 5.24996 108092 108092 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499545
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag451
+ 5.24996 108092 108092 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499544
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag452
+ 5.24996 108092 108092 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499543
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag453
+ 5.24996 108092 108092 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499542
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg78-Frag454
+ 5.58962 102428 102428 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499541
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag455
+ 5.58962 102428 102428 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499540
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag456
+ 5.58962 102428 102428 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499539
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag457
+ 5.58962 102428 102428 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499538
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag458
+ 5.58962 102428 102428 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499537
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag459
+ 5.58962 102428 102428 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499536
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg79-Frag460
+ 5.39714 106898 106898 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499535
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg80-Frag461
+ 5.39714 106898 106898 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499534
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg80-Frag462
+ 5.39714 106898 106898 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499533
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg80-Frag463
+ 5.39714 106898 106898 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499532
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg80-Frag464
+ 5.39714 106898 106898 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499531
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg80-Frag465
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499530
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag466
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499529
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag467
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499528
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag468
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499527
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag469
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499526
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag470
+ 5.44277 107349 107349 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499525
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg81-Frag471
+ 5.9162 100223 100223 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499524
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag472
+ 5.9162 100223 100223 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499523
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag473
+ 5.9162 100223 100223 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499522
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag474
+ 5.9162 100223 100223 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499521
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag475
+ 5.9162 100223 100223 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499520
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag476
+ 5.9162 100223 100223 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499519
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg82-Frag477
+ 5.72367 104477 104477 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499518
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag478
+ 5.72367 104477 104477 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499517
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag479
+ 5.72367 104477 104477 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499516
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag480
+ 5.72367 104477 104477 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499515
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag481
+ 5.72367 104477 104477 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499514
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag482
+ 5.72367 104477 104477 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499513
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg83-Frag483
+ 5.75649 104628 104628 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499512
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag484
+ 5.75649 104628 104628 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499511
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag485
+ 5.75649 104628 104628 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499510
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag486
+ 5.75649 104628 104628 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499509
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag487
+ 5.75649 104628 104628 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499508
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag488
+ 5.75649 104628 104628 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499507
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg84-Frag489
+ 5.68651 106710 106710 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499506
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag490
+ 5.68651 106710 106710 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499505
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag491
+ 5.68651 106710 106710 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499504
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag492
+ 5.68651 106710 106710 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499503
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag493
+ 5.68651 106710 106710 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499502
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag494
+ 5.68651 106710 106710 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499501
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg85-Frag495
+ 5.59716 109328 109328 1000 v 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499500
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag496
+ 5.59716 109328 109328 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499499
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag497
+ 5.59716 109328 109328 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499498
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag498
+ 5.59716 109328 109328 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499497
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag499
+ 5.59716 109328 109328 1000 v 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499496
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag500
+ 5.59716 109328 109328 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499495
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg86-Frag501
+ 5.9147 104312 104312 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499494
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag502
+ 5.9147 104312 104312 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499493
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag503
+ 5.9147 104312 104312 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499492
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag504
+ 5.9147 104312 104312 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499491
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag505
+ 5.9147 104312 104312 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499490
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag506
+ 5.9147 104312 104312 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499489
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg87-Frag507
+ 5.80431 107481 107481 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499488
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag508
+ 5.80431 107481 107481 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499487
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag509
+ 5.80431 107481 107481 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499486
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag510
+ 5.80431 107481 107481 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499485
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag511
+ 5.80431 107481 107481 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499484
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag512
+ 5.80431 107481 107481 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499483
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg88-Frag513
+ 5.83151 108399 108399 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499482
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag514
+ 5.83151 108399 108399 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499481
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag515
+ 5.83151 108399 108399 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499480
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag516
+ 5.83151 108399 108399 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499479
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag517
+ 5.83151 108399 108399 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499478
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag518
+ 5.83151 108399 108399 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499477
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg89-Frag519
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499476
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag520
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499475
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag521
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499474
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag522
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499473
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag523
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499472
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag524
+ 6.08162 105232 105232 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499471
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg90-Frag525
+ 5.96116 108704 108704 1000 ov 2013 17:45:32 GMT
+Keep-Alive: timeout=30000, max=499470
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg91-Frag526
+ 5.96116 108704 108704 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499469
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg91-Frag527
+ 5.96116 108704 108704 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499468
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg91-Frag528
+ 5.96116 108704 108704 1000 ov 2013 17:45:33 GMT
+Keep-Alive: timeout=30000, max=499467
+Connection: Keep-Alive
+Content-Type: video/f4f
+
+ Seg91-Frag529
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag1
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag2
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag3
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag4
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag5
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag6
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag7
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag8
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag9
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag10
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag11
+ 3.62948 2874.91 2874.91 1000 10.0.0.4 Seg2-Frag12
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag13
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag14
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag15
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag16
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag17
+ 3.56072 5847.95 5847.95 1000 10.0.0.4 Seg3-Frag18
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag19
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag20
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag21
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag22
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag23
+ 3.23281 8374.24 8374.24 1000 10.0.0.4 Seg4-Frag24
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag25
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag26
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag27
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag28
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag29
+ 5.96461 5743.42 5743.42 1000 10.0.0.4 Seg5-Frag30
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag31
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag32
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag33
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag34
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag35
+ 5.92139 7417.79 7417.79 1000 10.0.0.4 Seg6-Frag36
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag1
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag2
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag3
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag4
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag5
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.8 Seg1-Frag6
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag7
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag8
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag9
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag10
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag11
+ 3.70575 2815.74 2815.74 1000 10.0.0.8 Seg2-Frag12
+ 3.55824 5852.04 5852.04 1000 10.0.0.8 Seg3-Frag13
+ 3.55824 5852.04 5852.04 1000 10.0.0.8 Seg3-Frag14
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag1
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag2
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag3
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag4
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag5
+ 1.48711e+09 1.46415e-06 1.46415e-06 9.76102e-07 10.0.0.4 Seg1-Frag6
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag7
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag8
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag9
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag10
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag11
+ 3.46542 3011.01 3011.01 1000 10.0.0.4 Seg2-Frag12
+ 3.44886 6037.62 6037.62 1000 10.0.0.4 Seg3-Frag13
+ 3.44886 6037.62 6037.62 1000 10.0.0.4 Seg3-Frag14

@@ -308,7 +308,7 @@ int main(int argc, char* argv[])
 	fd_set readSet;
 	// Keep track of each file descriptor accepted
 	vector<int> fds;
-	vector<char*> fds_dns;
+	vector<string> fds_dns;
 
 	chrono::time_point<chrono::system_clock> start, end; 
 	chrono::duration<double> elapsed_seconds;
@@ -353,7 +353,7 @@ int main(int argc, char* argv[])
 			else
 			{
 				// get web server ip address for each connection
-				char* dns_server_ip = DNSGet(dnssd);
+				string dns_server_ip = DNSGet(dnssd);
 				fds_dns.push_back(dns_server_ip);
 				fds.push_back(clientsd);
 			}
@@ -375,8 +375,9 @@ int main(int argc, char* argv[])
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				ipserver = fds_dns[i];
-				cout<<"ipserver: "<<ipserver<<endl;
+				ipserver = new char[fds_dns[i].size() + 1];
+				memcpy(ipserver, fds_dns[i].c_str(), fds_dns[i].size() + 1);
+				cout<<"ipserver: "<<i<<endl;
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
 				int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
