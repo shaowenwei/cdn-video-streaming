@@ -326,6 +326,7 @@ int main(int argc, char* argv[])
 		// Set up the readSet
 		FD_ZERO(&readSet);
 		FD_SET(sd, &readSet);
+		cout << "refresh" << "1"<<endl;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			FD_SET(fds[i], &readSet);
@@ -353,17 +354,20 @@ int main(int argc, char* argv[])
 			else
 			{
 				// get web server ip address for each connection
-				string dns_server_ip = DNSGet(dnssd);
-				fds_dns.push_back(dns_server_ip);
 				fds.push_back(clientsd);
+				cout << "refresh" << "2"<<endl;
 			}
 		}
 
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
+
 			if(FD_ISSET(fds[i], &readSet))
 			{
-				
+				cout << "///////////////////////////////////i=" << i <<endl;
+				cout << "refresh" << "3"<<endl;
+				string dns_server_ip = DNSGet(dnssd);
+				fds_dns.push_back(dns_server_ip);
 				// connect to web server according to ip which dns gave
 				int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 				if(serversd == -1)
@@ -375,8 +379,9 @@ int main(int argc, char* argv[])
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				ipserver = new char[fds_dns[i].size() + 1];
-				memcpy(ipserver, fds_dns[i].c_str(), fds_dns[i].size() + 1);
+				string get_last = fds_dns.back();
+				ipserver = new char[get_last.size() + 1];
+				memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
 				cout<<"ipserver: "<<i<<endl;
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
@@ -390,6 +395,7 @@ int main(int argc, char* argv[])
 
 
 				while(1){
+					cout << "refresh" << "4"<<endl;
 					char buf[packet_len] = "";
 
 
