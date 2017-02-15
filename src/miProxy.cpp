@@ -128,9 +128,9 @@ vector<int> getBitrate(){
 }
 
 //get web server ip address 
-char* DNSGet(int dnssd){
+char* DNSGet(int dnssd,ushort dns_id){
 	char* ipserver;
-	construct con(1, "video.cse.umich.edu");
+	construct con(dns_id, "video.cse.umich.edu");
 	Question query = con.data_send();
 	int bytesSent = send(dnssd, &query, sizeof(query), 0);
 	if(bytesSent <= 0)
@@ -319,6 +319,7 @@ int main(int argc, char* argv[])
 	double T_cur = 0;
 	double throughput = 0;
 	double bitrate = 0;
+	ushort dns_id=0;
 	//create log file <duration> <tput> <avg-tput> <bitrate> <server-ip> <chunkname>
 
 	while(true)
@@ -326,7 +327,6 @@ int main(int argc, char* argv[])
 		// Set up the readSet
 		FD_ZERO(&readSet);
 		FD_SET(sd, &readSet);
-		cout << "refresh" << "1"<<endl;
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
 			FD_SET(fds[i], &readSet);
@@ -355,7 +355,6 @@ int main(int argc, char* argv[])
 			{
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
-				cout << "refresh" << "2"<<endl;
 			}
 		}
 
@@ -363,10 +362,11 @@ int main(int argc, char* argv[])
 		{
 
 			if(FD_ISSET(fds[i], &readSet))
-			{
-				cout << "///////////////////////////////////i=" << i <<endl;
-				cout << "refresh" << "3"<<endl;
-				string dns_server_ip = DNSGet(dnssd);
+			{	
+				string dns_server_ip = DNSGet(dnssd,dns_id);
+				dns_id++;
+				if(dns_id>65534) dns_id=0;
+				cout<<"DNS_ID = "<<dns_id<<endl;
 				fds_dns.push_back(dns_server_ip);
 				// connect to web server according to ip which dns gave
 				int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -395,10 +395,7 @@ int main(int argc, char* argv[])
 
 
 				while(1){
-					cout << "refresh" << "4"<<endl;
 					char buf[packet_len] = "";
-
-
 					//recv request from browser
 					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
 					if(bytesRecvd < 0)

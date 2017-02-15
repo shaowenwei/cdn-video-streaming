@@ -171,6 +171,7 @@ int main(int argc, char* argv[])
 	int len = 0;
 	int index = 0;
 	vector<string> ip_list;
+	ushort dns_id=0;
 
 	if(geo == 0)
 	{
@@ -280,14 +281,15 @@ int main(int argc, char* argv[])
 					string hostname = query.body.QNAME;
 					//cout << "hostname: " <<hostname<< endl;
 
-					response res(1, hostname);
-					
+					response res(dns_id, hostname);
+					dns_id++;
+					if(dns_id>65534) dns_id=0;
 					if(geo == 0)
 					{
 						res.ip = ip_list[index%len];
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;
-						cout<< fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;				
+						cout<<"ID="<<dns_id<< fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;				
 						index++;
 					}
 					else
@@ -295,7 +297,7 @@ int main(int argc, char* argv[])
     					cout<<fds_ip[i]<<endl;
 						cout<<server_filename<<endl;
 						string sip = distance(fds_ip[i], server_filename);
-						cout<<"sip:"<<sip<<endl;
+						cout<<"ID="<<dns_id<<"sip:"<<sip<<endl;
     						res.ip = sip;
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << sip << " " <<endl;
