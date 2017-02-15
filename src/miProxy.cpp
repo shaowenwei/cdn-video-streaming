@@ -365,14 +365,14 @@ int main(int argc, char* argv[])
 			{	
 				if(dns_usage == 1)
 				{
-					ipserver = DNSGet(dnssd,dns_id);
+					string dns_server_ip = DNSGet(dnssd,dns_id);
 					dns_id++;
 					if(dns_id>65534) dns_id=0;
 					cout<<"DNS_ID = "<<dns_id<<endl;
 					//fds_dns.push_back(dns_server_ip);
 					//string get_last = fds_dns.back();
-					//ipserver = new char[get_last.size() + 1];
-					//memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
+					ipserver = new char[dns_server_ip.size() + 1];
+					memcpy(ipserver, dns_server_ip.c_str(), dns_server_ip.size() + 1);
 					cout<<"ipserver: "<<ipserver<<endl;
 				}	
 				// connect to web server according to ip which dns gave
