@@ -363,11 +363,18 @@ int main(int argc, char* argv[])
 
 			if(FD_ISSET(fds[i], &readSet))
 			{	
-				string dns_server_ip = DNSGet(dnssd,dns_id);
-				dns_id++;
-				if(dns_id>65534) dns_id=0;
-				cout<<"DNS_ID = "<<dns_id<<endl;
-				fds_dns.push_back(dns_server_ip);
+				if(dns_usage == 1)
+				{
+					ipserver = DNSGet(dnssd,dns_id);
+					dns_id++;
+					if(dns_id>65534) dns_id=0;
+					cout<<"DNS_ID = "<<dns_id<<endl;
+					//fds_dns.push_back(dns_server_ip);
+					//string get_last = fds_dns.back();
+					//ipserver = new char[get_last.size() + 1];
+					//memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
+					cout<<"ipserver: "<<ipserver<<endl;
+				}	
 				// connect to web server according to ip which dns gave
 				int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 				if(serversd == -1)
@@ -379,10 +386,7 @@ int main(int argc, char* argv[])
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				string get_last = fds_dns.back();
-				ipserver = new char[get_last.size() + 1];
-				memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
-				cout<<"ipserver: "<<i<<endl;
+				
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
 				int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
@@ -391,7 +395,6 @@ int main(int argc, char* argv[])
 					cout << "Error on connect to web server\n";
 					exit(1);
 				}
-
 
 
 				while(1){
@@ -417,11 +420,8 @@ int main(int argc, char* argv[])
 
 					Chunk find_num;
 
-
-
 					//send request to server
 					string buff = buf;
-
 					pre_seg = seg;
 					cout << "pre-Seg:" << pre_seg <<endl;
 					seg = find_num.seg_num(buff);
@@ -474,10 +474,6 @@ int main(int argc, char* argv[])
 					    no_list = true;
 					}
 
-
-
-
-
 					//forward request to web server
 					int bytesSent = send(serversd, buff.c_str(), buff.length(), 0);
 					if(bytesSent <= 0){
@@ -487,9 +483,6 @@ int main(int argc, char* argv[])
 					else{
 						cout << "Send to web server:\n" << buff << endl;
 					}
-
-
-
 
 					// receive response from web server(header part)
 					char buf_r[packet_len];
