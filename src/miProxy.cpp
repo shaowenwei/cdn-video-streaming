@@ -138,11 +138,9 @@ char* DNSGet(int dnssd,ushort dns_id){
 		cout << "Error sending stuff to server" << endl;
 	}
 	cout << "Send to server: " << bytesSent << endl;
-	cout<<"1"<<endl;
+	
 	Response resp;
-	cout<<"2"<<endl;
 	int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
-	cout<<"3"<<endl;
 	if(bytesRecv > 0)
 	{
 		cout << "Received from client: " << bytesRecv << endl;
@@ -292,6 +290,7 @@ int main(int argc, char* argv[])
 		int err = select(maxfd + 1, &readSet, NULL, NULL, NULL);
 		assert(err != -1);
 
+		int server_sd;
 
 		if(FD_ISSET(sd, &readSet))
 		{
@@ -304,7 +303,7 @@ int main(int argc, char* argv[])
 			{
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
-				string dns_server_ip = DNSGet(dnssd, dns_id);
+				string dns_server_ip = DNSGet(dnssd,dns_id);
 				fds_ip.push_back(dns_server_ip);
 
 				dns_id++;
@@ -312,18 +311,20 @@ int main(int argc, char* argv[])
 				cout<<"DNS_ID = "<<dns_id<<endl;
 
 				// connect to web server according to ip which dns gave
-				int server_sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+				server_sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 				if(server_sd == -1)
 				{
-					cout << "Error creating server socket\n";
+					std::cout << "Error creating server socket\n";
 					exit(1);
 				}
 				struct sockaddr_in server;
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				ipserver = new char[dns_server_ip.size() + 1];
-				memcpy(ipserver, dns_server_ip.c_str(), dns_server_ip.size() + 1);
+				string get_last = dns_server_ip;
+				ipserver = new char[get_last.size() + 1];
+				memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
+				cout<<"ipserver: "<<ipserver<<endl;
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
 				int err1 = connect(server_sd, (sockaddr*) &server, sizeof(server));
@@ -332,7 +333,6 @@ int main(int argc, char* argv[])
 					cout << "Error on connect to web server\n";
 					exit(1);
 				}
-				cout<<"connect to webserver"<<" ip: "<<ipserver<<endl;
 				fds_dns.push_back(server_sd);
 			}
 		}
@@ -349,6 +349,7 @@ int main(int argc, char* argv[])
 
 					char buf[packet_len] = "";
 					//recv request from browser
+					cout<<"i: "<<fds[i]<<endl;
 					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
 					if(bytesRecvd < 0)
 					{
@@ -359,7 +360,7 @@ int main(int argc, char* argv[])
 					{
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
-						//close(serversd);
+						close(serversd);
 						fds_dns.erase(fds_dns.begin() + i);
 						//break;
 					}
