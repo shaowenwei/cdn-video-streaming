@@ -253,6 +253,7 @@ int main(int argc, char* argv[])
 	// Keep track of each file descriptor accepted
 	vector<int> fds;
 	vector<int> fds_dns;
+	vector<string> fds_ip;
 
 	chrono::time_point<chrono::system_clock> start, end; 
 	chrono::duration<double> elapsed_seconds;
@@ -303,6 +304,8 @@ int main(int argc, char* argv[])
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
 				string dns_server_ip = DNSGet(dnssd,dns_id);
+				fds_ip.push_back(dns_server_ip);
+
 				dns_id++;
 				if(dns_id > 65534) dns_id = 0;
 				cout<<"DNS_ID = "<<dns_id<<endl;
@@ -342,6 +345,8 @@ int main(int argc, char* argv[])
 			{	
 
 					int serversd = fds_dns[i];
+					string ipserver = fds_ip[i];
+					
 					char buf[packet_len] = "";
 					//recv request from browser
 					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
@@ -385,8 +390,6 @@ int main(int argc, char* argv[])
 		                    cout << "tput: " << throughput << "Kbps" << endl;
 		                    cout << "avg-tput: " << T_cur <<"Kbps"<< endl;
 		                    cout << "Chunk: " << chunk << endl;
-		                    //throughput = chunk * 8/(T_cur * 1000);
-		                    //cout << "throughput: " << throughput << "Kbps" << endl;
 		                    bitrate = T_cur/1.5;
 		                    cout << "bitrate: " << bitrate << endl;
    							for(int i = get_bitrate.size()-1; i != -1; --i){
