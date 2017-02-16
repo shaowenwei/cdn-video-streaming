@@ -224,28 +224,28 @@ int main(int argc, char* argv[])
 
 	int dnssd;
 	// socket connect to dns
-	// if(dns_usage == 1){
-	// 	cout << "dns_usage = true" << endl;
-	// 	dnssd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	// 	if(dnssd == -1)
-	// 	{
-	// 		std::cout << "Error creating dns server socket\n";
-	// 		exit(1);
-	// 	}
+	if(dns_usage == 1){
+		cout << "dns_usage = true" << endl;
+		dnssd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+		if(dnssd == -1)
+		{
+			std::cout << "Error creating dns server socket\n";
+			exit(1);
+		}
 
-	// 	struct sockaddr_in dns;
-	// 	memset(&dns, 0, sizeof(dns));
-	// 	dns.sin_family = AF_INET;
-	// 	dns.sin_port = htons((u_short) DNSportNum);
-	// 	struct hostent* sp = gethostbyname(DNSip);
-	// 	memcpy(&dns.sin_addr, sp->h_addr, sp->h_length);
-	// 	int err = connect(dnssd, (sockaddr*) &dns , sizeof(dns));
-	// 	if(err == -1)
-	// 	{
-	// 		cout << "Error on connect\n";
-	// 		exit(1);
-	// 	}
-	// }
+		struct sockaddr_in dns;
+		memset(&dns, 0, sizeof(dns));
+		dns.sin_family = AF_INET;
+		dns.sin_port = htons((u_short) DNSportNum);
+		struct hostent* sp = gethostbyname(DNSip);
+		memcpy(&dns.sin_addr, sp->h_addr, sp->h_length);
+		int err = connect(dnssd, (sockaddr*) &dns , sizeof(dns));
+		if(err == -1)
+		{
+			cout << "Error on connect\n";
+			exit(1);
+		}
+	}
 
 
 	// Set of file descriptors to listen to
