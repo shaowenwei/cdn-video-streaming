@@ -138,9 +138,11 @@ char* DNSGet(int dnssd,ushort dns_id){
 		cout << "Error sending stuff to server" << endl;
 	}
 	cout << "Send to server: " << bytesSent << endl;
-	
+	cout<<"1"<<endl;
 	Response resp;
+	cout<<"2"<<endl;
 	int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
+	cout<<"3"<<endl;
 	if(bytesRecv > 0)
 	{
 		cout << "Received from client: " << bytesRecv << endl;
@@ -302,6 +304,7 @@ int main(int argc, char* argv[])
 			{
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
+				cout<<
 				string dns_server_ip = DNSGet(dnssd, dns_id);
 				fds_ip.push_back(dns_server_ip);
 
