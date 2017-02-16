@@ -257,7 +257,7 @@ int main(int argc, char* argv[])
 		{
 			if(FD_ISSET(fds[i], &readSet))
 			{
-				while(1){
+				//while(1){
 
 					//recv the DNS request
 					Question query;
@@ -314,11 +314,11 @@ int main(int argc, char* argv[])
 						cout << "Send DNS response to proxy:\n" << bytesSend << endl;
 					}
 					
-					cout << "Connection closed" << endl;
-					fds.erase(fds.begin() + i);
-					fds_ip.erase(fds_ip.begin() + i);
-					break;
-				}
+					//cout << "Connection closed" << endl;
+					//fds.erase(fds.begin() + i);
+					//fds_ip.erase(fds_ip.begin() + i);
+					//break;
+				//}
 			}
 		}
 	}
