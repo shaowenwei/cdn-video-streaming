@@ -346,9 +346,10 @@ int main(int argc, char* argv[])
 
 					int serversd = fds_dns[i];
 					string ipserver = fds_ip[i];
-					
+
 					char buf[packet_len] = "";
 					//recv request from browser
+					cout<<"i: "<<fds[i]<<endl;
 					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
 					if(bytesRecvd < 0)
 					{
