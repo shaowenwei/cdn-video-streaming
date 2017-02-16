@@ -289,7 +289,7 @@ int main(int argc, char* argv[])
 						res.ip = ip_list[index%len];
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;
-						cout<<"ID="<<dns_id<< fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;				
+						cout<<"ID = "<<dns_id<<fds_ip[i] << " " << res.hostname << " " << ip_list[index%len] << " " <<endl;				
 						index++;
 					}
 					else
@@ -297,7 +297,7 @@ int main(int argc, char* argv[])
     					cout<<fds_ip[i]<<endl;
 						cout<<server_filename<<endl;
 						string sip = distance(fds_ip[i], server_filename);
-						cout<<"ID="<<dns_id<<"sip:"<<sip<<endl;
+						cout<<"ID = "<<dns_id<<" sip:"<<sip<<endl;
     						res.ip = sip;
 						cout << res.hostname << endl;
 						logfile << fds_ip[i] << " " << res.hostname << " " << sip << " " <<endl;
