@@ -304,7 +304,6 @@ int main(int argc, char* argv[])
 			{
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
-				cout<<
 				string dns_server_ip = DNSGet(dnssd, dns_id);
 				fds_ip.push_back(dns_server_ip);
 
