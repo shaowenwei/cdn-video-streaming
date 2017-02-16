@@ -324,6 +324,7 @@ int main(int argc, char* argv[])
 
 	while(true)
 	{
+		cout<<"while true"<<endl;		
 		// Set up the readSet
 		FD_ZERO(&readSet);
 		FD_SET(sd, &readSet);
@@ -355,17 +356,18 @@ int main(int argc, char* argv[])
 			{
 				// get web server ip address for each connection
 				fds.push_back(clientsd);
+				string dns_server_ip = DNSGet(dnssd,dns_id);
+				dns_id++;
+				if(dns_id>65534) dns_id=0;
+				cout<<"DNS_ID = "<<dns_id<<endl;
+				fds_dns.push_back(dns_server_ip);
 			}
-			string dns_server_ip = DNSGet(dnssd,dns_id);
-			dns_id++;
-			if(dns_id>65534) dns_id=0;
-			cout<<"DNS_ID = "<<dns_id<<endl;
-			fds_dns.push_back(dns_server_ip);
 		}
+
 
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
-
+			cout<<"for loop"<<endl;
 			if(FD_ISSET(fds[i], &readSet))
 			{	
 
@@ -380,7 +382,7 @@ int main(int argc, char* argv[])
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				string get_last = fds_dns.back();
+				string get_last = fds_dns[i];
 				ipserver = new char[get_last.size() + 1];
 				memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
 				cout<<"ipserver: "<<ipserver<<endl;
@@ -394,7 +396,7 @@ int main(int argc, char* argv[])
 				}
 
 
-
+				cout<<"while 1"<<endl;
 				//while(1){
 					char buf[packet_len] = "";
 					//recv request from browser
@@ -409,8 +411,8 @@ int main(int argc, char* argv[])
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
 						fds_dns.erase(fds_dns.begin() + i);
-						close(serversd);
-						break;
+						//close(serversd);
+						//break;
 					}
 					else{
 						cout<< "Received from browser:\n"<<buf<<endl;
@@ -472,7 +474,9 @@ int main(int argc, char* argv[])
 						Modify modify;
 						s_old = buff;
 						buff = modify.findf4m(buff);
-					    no_list = true;
+						cout<<"f4mbuf:"<<buff<<endl;
+					    	no_list = true;
+
 					}
 
 
@@ -573,13 +577,13 @@ int main(int argc, char* argv[])
 						}
 					}
 
-
+					//cout<<"no list"<<no_list<<endl;
 					//if request .f4m, proxy request .f4m and store it locally
 					if(no_list == true){
-
+						cout<<"no_list"<<endl;
 						//send
 						int bytesS = send(serversd, s_old.c_str(), s_old.length(), 0);
-
+						cout<<"f4m"<<bytesS<<endl;
 						if(bytesS <= 0){
 							cout << "Error sending .f4m request to web server" << endl;
 							exit(1);
@@ -628,7 +632,7 @@ int main(int argc, char* argv[])
 						myfile.close();
 						get_bitrate = getBitrate();
 						sort(get_bitrate.begin(), get_bitrate.end());
-						
+						//no_list = false;
 					}
 				//} 
 			}
