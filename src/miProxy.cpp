@@ -359,7 +359,7 @@ int main(int argc, char* argv[])
 					{
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
-						close(serversd);
+						//close(serversd);
 						fds_dns.erase(fds_dns.begin() + i);
 						//break;
 					}
