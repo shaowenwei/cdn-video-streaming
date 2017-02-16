@@ -247,68 +247,12 @@ int main(int argc, char* argv[])
 		}
 	}
 
-		//send to dns server
-		// while(1){
-		// 	construct con(1, "video.cse.umich.edu");
-		// 	Question query = con.data_send();
-		// 	int bytesSent = send(dnssd, &query, sizeof(query), 0);
-		// 	if(bytesSent <= 0)
-		// 	{
-		// 		cout << "Error sending stuff to server" << endl;
-		// 	}
-		// 	cout << "Send to server: " << bytesSent << endl;
-
-		// 	Response resp;
-		// 	int bytesRecv = recv(dnssd, &resp, sizeof(resp), 0);
-		// 	if(bytesRecv > 0)
-		// 	{
-		// 		cout << "Received from client: " << bytesRecv << endl;
-		// 	}
-		// 	else
-		// 	{
-		// 		exit(1);
-		// 	}
-
-		// 	if(resp.head.RCODE == '3'){
-		// 		cout<<"can not found hostname"<<endl;
-		// 		exit(1);
-		// 	}
-		// 	else{
-		// 		cout<<resp.body.RDATA<<endl;
-		// 		ipserver = resp.body.RDATA;
-		// 		portNumServer = 80;
-		// 		break;
-		// 	}
-		// }
-	//}
-
-	// socket connect to server
-	// int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	// if(serversd == -1)
-	// {
-	// 	std::cout << "Error creating server socket\n";
-	// 	exit(1);
-	// }
-
-	// struct sockaddr_in server;
-	// memset(&server, 0, sizeof(server));
-	// server.sin_family = AF_INET;
-	// server.sin_port = htons((u_short) portNumServer);
-	// server.sin_addr.s_addr = inet_addr(ipserver);
-	// int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
-	// if(err1 == -1)
-	// {
-	// 	cout << "Error on connect to web server\n";
-	// 	exit(1);
-	// }
-
-
 
 	// Set of file descriptors to listen to
 	fd_set readSet;
 	// Keep track of each file descriptor accepted
 	vector<int> fds;
-	vector<string> fds_dns;
+	vector<int> fds_dns;
 
 	chrono::time_point<chrono::system_clock> start, end; 
 	chrono::duration<double> elapsed_seconds;
@@ -324,9 +268,9 @@ int main(int argc, char* argv[])
 
 	while(true)
 	{
-		cout<<"while true"<<endl;		
-		// Set up the readSet
-		FD_ZERO(&readSet);
+		cout<<"enter while loop"<<endl;		
+		
+		FD_ZERO(&readSet); // Set up the readSet
 		FD_SET(sd, &readSet);
 		for(int i = 0; i < (int) fds.size(); ++i)
 		{
@@ -345,6 +289,8 @@ int main(int argc, char* argv[])
 		int err = select(maxfd + 1, &readSet, NULL, NULL, NULL);
 		assert(err != -1);
 
+		int server_sd;
+
 		if(FD_ISSET(sd, &readSet))
 		{
 			int clientsd = accept(sd, NULL, NULL);
@@ -358,22 +304,12 @@ int main(int argc, char* argv[])
 				fds.push_back(clientsd);
 				string dns_server_ip = DNSGet(dnssd,dns_id);
 				dns_id++;
-				if(dns_id>65534) dns_id=0;
+				if(dns_id > 65534) dns_id = 0;
 				cout<<"DNS_ID = "<<dns_id<<endl;
-				fds_dns.push_back(dns_server_ip);
-			}
-		}
-
-
-		for(int i = 0; i < (int) fds.size(); ++i)
-		{
-			cout<<"for loop"<<endl;
-			if(FD_ISSET(fds[i], &readSet))
-			{	
 
 				// connect to web server according to ip which dns gave
-				int serversd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-				if(serversd == -1)
+				server_sd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+				if(server_sd == -1)
 				{
 					std::cout << "Error creating server socket\n";
 					exit(1);
@@ -382,22 +318,30 @@ int main(int argc, char* argv[])
 				memset(&server, 0, sizeof(server));
 				server.sin_family = AF_INET;
 				server.sin_port = htons((u_short) portNumServer);
-				string get_last = fds_dns[i];
+				string get_last = dns_server_ip;
 				ipserver = new char[get_last.size() + 1];
 				memcpy(ipserver, get_last.c_str(), get_last.size() + 1);
 				cout<<"ipserver: "<<ipserver<<endl;
 
 				server.sin_addr.s_addr = inet_addr(ipserver);
-				int err1 = connect(serversd, (sockaddr*) &server, sizeof(server));
+				int err1 = connect(server_sd, (sockaddr*) &server, sizeof(server));
 				if(err1 == -1)
 				{
 					cout << "Error on connect to web server\n";
 					exit(1);
 				}
+				fds_dns.push_back(server_sd);
+			}
+		}
 
 
-				cout<<"while 1"<<endl;
-				//while(1){
+		for(int i = 0; i < (int) fds.size(); ++i)
+		{
+			cout<<"enter for loop"<<endl;
+			if(FD_ISSET(fds[i], &readSet))
+			{	
+
+					int serversd = fds_dns[i];
 					char buf[packet_len] = "";
 					//recv request from browser
 					int bytesRecvd = recv(fds[i], &buf, packet_len, 0);
@@ -410,8 +354,8 @@ int main(int argc, char* argv[])
 					{
 						cout << "Connection closed" << endl;
 						fds.erase(fds.begin() + i);
+						close(serversd);
 						fds_dns.erase(fds_dns.begin() + i);
-						//close(serversd);
 						//break;
 					}
 					else{
